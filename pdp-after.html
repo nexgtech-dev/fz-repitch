@@ -3,28 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Apple iPhone 7 256GB Jet Black — FoneZone Concept PDP</title>
+<title>Apple iPhone 12 128GB — FoneZone Concept PDP</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#0f2438;
-    --ink-2:#3d5266;
-    --muted:#6b7f92;
-    --line:#e3eaf1;
-    --bg:#ffffff;
-    --bg-soft:#f6f9fc;
-    --blue:#1557c0;
-    --blue-dark:#0f4396;
-    --green:#0f8a5f;
-    --green-soft:#e8f7f1;
-    --red:#c0392b;
+    --ink:#0f2438;--ink-2:#3d5266;--muted:#6b7f92;--line:#e3eaf1;
+    --bg:#ffffff;--bg-soft:#f6f9fc;
+    --blue:#1557c0;--blue-dark:#0f4396;--green:#0f8a5f;--green-soft:#e8f7f1;
     --radius:14px;
-    --shadow:0 10px 30px rgba(15,36,56,.10);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--ink);background:var(--bg);line-height:1.5;-webkit-font-smoothing:antialiased}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--ink);background:var(--bg);line-height:1.5;-webkit-font-smoothing:antialiased}
   img{max-width:100%;display:block}
   button{font-family:inherit;cursor:pointer}
   a{color:var(--blue);text-decoration:none}
@@ -50,8 +41,6 @@
   .crumbs span.sep{margin:0 7px;opacity:.5}
 
   .pdp{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;padding:14px 0 56px}
-
-  /* gallery */
   .gallery{position:sticky;top:78px;align-self:start}
   .main-frame{border:1px solid var(--line);border-radius:var(--radius);background:var(--bg-soft);overflow:hidden;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center}
   .main-frame img{width:100%;height:100%;object-fit:contain}
@@ -62,7 +51,6 @@
   .gallery-note{margin-top:12px;font-size:12.5px;color:var(--muted);display:flex;gap:8px;align-items:flex-start}
   .gallery-note svg{flex:none;margin-top:1px}
 
-  /* buy box */
   h1{font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1.15}
   .subtitle{color:var(--ink-2);font-size:15px;margin-top:6px}
   .cert-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
@@ -70,9 +58,11 @@
   .pill.blue{background:#eaf1fc;color:var(--blue)}
 
   .price-block{margin-top:22px;padding:18px 20px;border:1px solid var(--line);border-radius:var(--radius);background:var(--bg-soft)}
+  .price-line{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
   .price{font-size:34px;font-weight:800;letter-spacing:-.02em}
   .price small{font-size:15px;font-weight:600;color:var(--ink-2);vertical-align:top;margin-right:2px}
-  .price-meta{font-size:13px;color:var(--muted);margin-top:4px}
+  .save-badge{background:#7c3aed;color:#fff;font-size:12.5px;font-weight:700;padding:5px 11px;border-radius:999px}
+  .price-meta{font-size:13px;color:var(--muted);margin-top:6px}
   .emi{margin-top:10px;font-size:13.5px;color:var(--ink-2);background:#fff;border:1px dashed var(--line);border-radius:10px;padding:9px 12px}
   .emi b{color:var(--ink)}
 
@@ -92,15 +82,13 @@
   .flaws li svg{flex:none;margin-top:2px}
   .flaws .ok{color:var(--green)}
 
-  .swatches{display:flex;gap:10px;align-items:center}
-  .swatch{width:38px;height:38px;border-radius:50%;border:2px solid var(--line);background:#1a1a1a;position:relative}
-  .swatch.active{border-color:var(--blue);box-shadow:0 0 0 3px rgba(21,87,192,.14)}
+  .swatches{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  .swatch{width:38px;height:38px;border-radius:50%;border:2px solid var(--line);cursor:pointer;position:relative}
+  .swatch.active{box-shadow:0 0 0 3px rgba(21,87,192,.14);border-color:var(--blue)}
   .swatch-label{font-size:13px;color:var(--ink-2);font-weight:500}
   .storage{display:flex;gap:10px;flex-wrap:wrap}
-  .stor{border:2px solid var(--line);border-radius:10px;padding:10px 16px;font-size:14px;font-weight:600;background:#fff;min-width:96px;text-align:center}
-  .stor small{display:block;font-size:11px;font-weight:500;color:var(--muted);margin-top:2px}
-  .stor.active{border-color:var(--blue);color:var(--blue)}
-  .stor.oos{opacity:.65;cursor:not-allowed}
+  .stor{border:2px solid var(--blue);color:var(--blue);border-radius:10px;padding:10px 16px;font-size:14px;font-weight:600;background:#fff;min-width:96px;text-align:center}
+  .stor small{display:block;font-size:11px;font-weight:500;color:var(--green);margin-top:2px}
 
   .qty-row{display:flex;gap:12px;align-items:center;margin-top:8px}
   .qty{display:flex;align-items:center;border:1px solid var(--line);border-radius:10px;overflow:hidden}
@@ -115,7 +103,13 @@
   .trust-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:16px;font-size:12.5px;color:var(--ink-2)}
   .trust-row span{display:flex;align-items:center;gap:6px}
 
-  /* battery + inspection */
+  .protect{margin-top:20px;border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .protect h4{font-size:14px;font-weight:800;margin-bottom:4px}
+  .protect .sub{font-size:12.5px;color:var(--muted);margin-bottom:12px}
+  .protect-opt{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 0;border-top:1px dashed var(--line);font-size:13.5px}
+  .protect-opt b{font-size:14px}
+  .protect-opt .add{border:1px solid var(--line);background:#fff;border-radius:8px;padding:6px 12px;font-size:12.5px;font-weight:700;color:var(--blue)}
+
   .panel-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:24px;padding:8px 0 48px}
   .card{border:1px solid var(--line);border-radius:var(--radius);padding:24px;background:#fff}
   .card h3{font-size:17px;font-weight:800;margin-bottom:4px}
@@ -175,7 +169,7 @@
 <body>
 
 <div class="announce">
-  <b>6-month warranty</b> on every device <span class="dot">·</span> COD across India <span class="dot">·</span> 7-day replacement, no questions
+  <b>12-month warranty</b> on every device <span class="dot">·</span> 7-day change-of-mind <span class="dot">·</span> Mada · Visa · Tabby · Tamara
 </div>
 
 <header class="site">
@@ -185,13 +179,13 @@
       FONEZONE
     </div>
     <nav class="main">
-      <a href="#">iPhones</a>
-      <a href="#">Android</a>
-      <a href="#">MacBooks</a>
-      <a href="#">Warranty &amp; Returns</a>
+      <a href="#">Apple</a>
+      <a href="#">Samsung</a>
+      <a href="#">iPad</a>
+      <a href="#">Warranty Terms</a>
     </nav>
     <div class="header-right">
-      <span>Track order</span>
+      <span>WhatsApp support</span>
       <span class="cart-chip">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 3h2l2.4 12.2a1 1 0 0 0 1 .8h9.8a1 1 0 0 0 1-.8L21 7H7" stroke="#3d5266" stroke-width="2" stroke-linecap="round"/><circle cx="10" cy="20" r="1.5" fill="#3d5266"/><circle cx="18" cy="20" r="1.5" fill="#3d5266"/></svg>
         Cart (0)
@@ -203,87 +197,91 @@
 <div class="wrap">
   <div class="crumbs">
     <a href="#">Home</a><span class="sep">/</span>
-    <a href="#">Apple iPhones</a><span class="sep">/</span>
-    <a href="#">iPhone 7</a><span class="sep">/</span>
-    256GB Jet Black
+    <a href="#">Apple iPhone</a><span class="sep">/</span>
+    <a href="#">iPhone 12</a><span class="sep">/</span>
+    128GB Black
   </div>
 
   <div class="pdp">
-    <!-- GALLERY -->
     <div class="gallery">
       <div class="main-frame">
-        <img id="mainImg" src="https://cdn.shopify.com/s/files/1/0618/8761/0924/files/1_49992665-39f1-4604-87ff-a8d4ba96e870.jpg?v=1788631349" alt="Apple iPhone 7 256GB Jet Black — front">
+        <img id="mainImg" src="https://cdn.shopify.com/s/files/1/0338/9947/9177/files/ip12blck_bc5c9461-4646-4dd4-8b2a-2266ad080c3d.jpg?v=1701343971" alt="Apple iPhone 12 128GB Black">
       </div>
       <div class="thumbs" id="thumbs"></div>
       <div class="gallery-note">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#6b7f92" stroke-width="2"/><path d="M12 8v5" stroke="#6b7f92" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="16" r="1" fill="#6b7f92"/></svg>
-        Photos are of the actual unit you will receive — not stock images. Every scratch you see is a scratch you will get.
+        Condition photos are of the unit family you receive. Every tier's known marks are listed below — no surprises at the door.
       </div>
     </div>
 
-    <!-- BUY BOX -->
     <div class="buybox">
-      <h1>Apple iPhone 7</h1>
-      <p class="subtitle">256GB · Jet Black · Unlocked · Ready to ship</p>
+      <h1>Apple iPhone 12</h1>
+      <p class="subtitle" id="subtitle">128GB · Black · Unlocked · Ready to ship</p>
       <div class="cert-row">
         <span class="pill">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0f8a5f" stroke-width="3" stroke-linecap="round"/></svg>
-          6-month warranty
+          12-month warranty
         </span>
         <span class="pill">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0f8a5f" stroke-width="3" stroke-linecap="round"/></svg>
-          7-day replacement
+          7-day change of mind
         </span>
         <span class="pill blue">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1557c0" stroke-width="3" stroke-linecap="round"/></svg>
-          32-point inspection passed
+          Certified by experts
         </span>
       </div>
 
       <div class="price-block">
-        <div class="price"><small>₹</small><span id="priceVal">10,560</span></div>
-        <div class="price-meta" id="priceMeta">Grade A price · warranty included · no hidden fees at checkout</div>
-        <div class="emi">EMI from <b>₹880/month</b> · 12 months · interest shown before you apply, not after</div>
+        <div class="price-line">
+          <div class="price"><small>SAR&nbsp;</small><span id="priceVal">1,000</span></div>
+          <span class="save-badge" id="saveBadge">-50% vs new</span>
+        </div>
+        <div class="price-meta" id="priceMeta">Good condition · whole riyals, always · warranty included · no hidden fees at checkout</div>
+        <div class="emi">4 interest-free instalments with <b>Tabby</b> · or <b>Tamara</b> · approval shown before you commit</div>
       </div>
 
-      <div class="section-label">Condition grade</div>
+      <div class="section-label">Condition — pick your tier</div>
       <div class="grades" id="grades">
-        <button class="grade active" data-grade="a" data-price="10560" data-batt="87" data-cycles="~420">
-          <div class="g-name">Grade A</div>
-          <div class="g-price">₹10,560</div>
-          <div class="g-desc">Near mint. 0–3 micro-scratches, invisible at arm's length.</div>
+        <button class="grade active" data-grade="good" data-price="1000" data-batt="89" data-cycles="~380" data-color="Black">
+          <div class="g-name">Good</div>
+          <div class="g-price">SAR 1,000</div>
+          <div class="g-desc">Light micro-marks, invisible at arm's length. Screen glass clean.</div>
         </button>
-        <button class="grade" data-grade="b" data-price="8990" data-batt="82" data-cycles="~510">
-          <div class="g-name">Grade B</div>
-          <div class="g-price">₹8,990</div>
-          <div class="g-desc">Light wear. Scuffs on frame, screen glass clean.</div>
+        <button class="grade" data-grade="very" data-price="1150" data-batt="92" data-cycles="~290" data-color="Black">
+          <div class="g-name">Very Good</div>
+          <div class="g-price">SAR 1,150</div>
+          <div class="g-desc">Near-mint. Only close inspection finds marks on the frame.</div>
         </button>
-        <button class="grade" data-grade="c" data-price="7490" data-batt="78" data-cycles="~600">
-          <div class="g-name">Grade C</div>
-          <div class="g-price">₹7,490</div>
-          <div class="g-desc">Honest marks. Visible scratches incl. on screen. Fully functional.</div>
+        <button class="grade" data-grade="exc" data-price="1275" data-batt="95" data-cycles="~180" data-color="Black">
+          <div class="g-name">Excellent</div>
+          <div class="g-price">SAR 1,275</div>
+          <div class="g-desc">As-close-to-new as refurbished gets. Fewer than 200 cycles.</div>
         </button>
       </div>
 
       <div class="flaws" id="flawBox">
         <h4>
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#0f2438" stroke-width="2"/><path d="M12 8v5" stroke="#0f2438" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="16" r="1" fill="#0f2438"/></svg>
-          What to expect on <span id="flawGrade">Grade A</span>
+          What to expect on <span id="flawGrade">Good</span>
         </h4>
         <ul id="flawList"></ul>
       </div>
 
       <div class="section-label">Storage</div>
       <div class="storage">
-        <button class="stor oos" disabled>32GB<small>Notify me</small></button>
-        <button class="stor oos" disabled>128GB<small>Notify me</small></button>
-        <button class="stor active">256GB<small>In stock</small></button>
+        <button class="stor">128GB<small>Selected — matches this link</small></button>
       </div>
 
       <div class="section-label">Colour</div>
-      <div class="swatches">
-        <div class="swatch active" title="Jet Black"></div>
-        <span class="swatch-label">Jet Black — the only unit we have in this grade right now</span>
+      <div class="swatches" id="swatches">
+        <div class="swatch active" data-img="0" data-name="Black" style="background:#1a1a1a" title="Black"></div>
+        <div class="swatch" data-img="1" data-name="White" style="background:#f3f3f3" title="White"></div>
+        <div class="swatch" data-img="2" data-name="Red" style="background:#c0392b" title="Red"></div>
+        <div class="swatch" data-img="3" data-name="Green" style="background:#2e8b57" title="Green"></div>
+        <div class="swatch" data-img="4" data-name="Purple" style="background:#8e6bbf" title="Purple"></div>
+        <div class="swatch" data-img="5" data-name="Blue" style="background:#2c5f8a" title="Blue"></div>
+        <span class="swatch-label" id="colorLabel">Black</span>
       </div>
 
       <div class="section-label">Quantity</div>
@@ -293,23 +291,37 @@
           <span id="qVal">1</span>
           <button id="qPlus" aria-label="Increase">+</button>
         </div>
-        <span style="font-size:13px;color:var(--muted)">Ships within 24 hrs of order confirmation</span>
+        <span style="font-size:13px;color:var(--muted)">Ships within 24 hrs across KSA</span>
       </div>
 
       <div class="cta-col">
         <button class="btn btn-primary" id="addBtn">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M3 3h2l2.4 12.2a1 1 0 0 0 1 .8h9.8a1 1 0 0 0 1-.8L21 7H7" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="10" cy="20" r="1.5" fill="#fff"/><circle cx="18" cy="20" r="1.5" fill="#fff"/></svg>
-          Add to cart — <span id="ctaPrice">₹10,560</span>
+          Add to cart — SAR <span id="ctaPrice">1,000</span>
         </button>
-        <a class="btn btn-wa" href="cod-flow.html">
+        <a class="btn btn-wa" href="consult-flow.html">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3z" stroke="#0f8a5f" stroke-width="2"/><path d="M8.5 10.5c.5 3 2.5 4.8 5.2 5.4l1.3-1.3 2 .9-.4 1.6c-3.9.4-7.7-2.9-8.4-7l1.6-.4.9 2-2.2-1.2z" fill="#0f8a5f"/></svg>
-          Order with COD — verify address on WhatsApp first
+          Ask us on WhatsApp first — condition photos, battery, delivery ETA
         </a>
       </div>
 
+      <div class="protect">
+        <h4>Protect+ add-ons (optional)</h4>
+        <div class="sub">Accident cover on top of the free 12-month manufacturing warranty. Your call — never pre-checked.</div>
+        <div class="protect-opt">
+          <div><b>+ SAR 99</b> — 1-year accident protection + free original cable</div>
+          <button class="add" data-add="1-year Protect+">Add</button>
+        </div>
+        <div class="protect-opt">
+          <div><b>+ SAR 199</b> — 2-year accident protection + free original cable</div>
+          <button class="add" data-add="2-year Protect+">Add</button>
+        </div>
+      </div>
+
       <div class="trust-row">
-        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" stroke="#0f8a5f" stroke-width="2"/></svg> Warranty starts day 1, not on delivery</span>
-        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="13" rx="2" stroke="#1557c0" stroke-width="2"/><path d="M3 10h18" stroke="#1557c0" stroke-width="2"/></svg> UPI · Cards · COD (₹1,000 advance)</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" stroke="#0f8a5f" stroke-width="2"/></svg> Warranty starts day 1</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="13" rx="2" stroke="#1557c0" stroke-width="2"/><path d="M3 10h18" stroke="#1557c0" stroke-width="2"/></svg> Mada · Visa · Tabby · Tamara</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3z" stroke="#0f8a5f" stroke-width="2"/></svg> WhatsApp support, KSA hours</span>
       </div>
     </div>
   </div>
@@ -325,29 +337,29 @@
           <svg width="120" height="120" viewBox="0 0 120 120">
             <circle cx="60" cy="60" r="50" stroke="#e3eaf1" stroke-width="10" fill="none"/>
             <circle id="battArc" cx="60" cy="60" r="50" stroke="#0f8a5f" stroke-width="10" fill="none"
-              stroke-linecap="round" stroke-dasharray="314" stroke-dashoffset="41"/>
+              stroke-linecap="round" stroke-dasharray="314" stroke-dashoffset="35"/>
           </svg>
-          <div class="val"><b id="battVal">87%</b><small>health</small></div>
+          <div class="val"><b id="battVal">89%</b><small>health</small></div>
         </div>
         <div class="batt-facts">
-          <div>Charge cycles: <b id="cycVal">~420</b></div>
-          <div>Typical runtime: <b>6–7 hrs screen-on</b></div>
-          <div>Replacement cost if it drops below 80% within warranty: <b>free</b></div>
+          <div>Charge cycles: <b id="cycVal">~380</b></div>
+          <div>Typical runtime: <b>8–9 hrs screen-on</b></div>
+          <div>If health drops below 80% in warranty: <b>free replacement</b></div>
         </div>
       </div>
     </div>
     <div class="card">
-      <h3>32-point inspection — passed</h3>
-      <p class="sub">The 32 checks we run on every unit before it ships. Key items:</p>
+      <h3>Certification checklist — passed</h3>
+      <p class="sub">What "Certified by experts" means on this unit:</p>
       <div class="check-list">
-        <div class="check"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0f8a5f" stroke-width="3" stroke-linecap="round"/></svg> Display: no dead pixels, touch full response</div>
-        <div class="check"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0f8a5f" stroke-width="3" stroke-linecap="round"/></svg> Touch ID paired to logic board</div>
-        <div class="check"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0f8a5f" stroke-width="3" stroke-linecap="round"/></svg> Both cameras focus &amp; flash fire</div>
+        <div class="check"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0f8a5f" stroke-width="3" stroke-linecap="round"/></svg> Display: no dead pixels, full touch response</div>
+        <div class="check"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0f8a5f" stroke-width="3" stroke-linecap="round"/></svg> Face ID pairs to logic board</div>
+        <div class="check"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0f8a5f" stroke-width="3" stroke-linecap="round"/></svg> Both cameras focus, flash fires</div>
         <div class="check"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0f8a5f" stroke-width="3" stroke-linecap="round"/></svg> Loudspeaker, earpiece, both mics</div>
         <div class="check"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0f8a5f" stroke-width="3" stroke-linecap="round"/></svg> Charging port seats firmly, fast charge ok</div>
         <div class="check"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0f8a5f" stroke-width="3" stroke-linecap="round"/></svg> IMEI clean — not blocked, not stolen</div>
-        <div class="check"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0f8a5f" stroke-width="3" stroke-linecap="round"/></svg> Wi-Fi + Bluetooth pair &amp; hold</div>
-        <div class="check"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0f8a5f" stroke-width="3" stroke-linecap="round"/></svg> Water-seal status disclosed (IP67 not re-verified after refurb)</div>
+        <div class="check"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0f8a5f" stroke-width="3" stroke-linecap="round"/></svg> 5G/LTE bands tested on local networks</div>
+        <div class="check"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0f8a5f" stroke-width="3" stroke-linecap="round"/></svg> Water-seal status disclosed (IP68 not re-verified after refurb)</div>
       </div>
     </div>
   </div>
@@ -357,15 +369,15 @@
   <div class="box-inner">
     <div class="box-item">
       <h4>In the box</h4>
-      <p>iPhone 7 handset · USB-Lightning cable · SIM ejector. No fake accessories, no "free case" we sourced for ₹40.</p>
+      <p>iPhone 12 handset · USB-C to Lightning cable · SIM ejector. Protect+ buyers also get the branded original cable.</p>
     </div>
     <div class="box-item">
       <h4>Warranty — one number, everywhere</h4>
-      <p>6 months, parts &amp; labour, same on the banner, the product page, the invoice and the WhatsApp receipt. If it says 12 somewhere, that's a bug — tell us and we honour it.</p>
+      <p>12 months on manufacturing defects — same on the banner, the product page, the invoice and the WhatsApp receipt. Accident cover is an explicit add-on, never silently included or excluded.</p>
     </div>
     <div class="box-item">
-      <h4>7-day replacement</h4>
-      <p>Dead on arrival or mismatch with the grade we sold you? Full replacement, we pay the pickup. No "restocking fee", no 15-day form.</p>
+      <h4>7-day change of mind</h4>
+      <p>Doesn't match the tier we sold you? Full return, we arrange the pickup. No restocking fee, no 15-day form.</p>
     </div>
   </div>
 </div>
@@ -373,65 +385,66 @@
 <div class="cod-cta">
   <div class="cod-inner">
     <div>
-      <h3>COD that doesn't get refused at the door</h3>
-      <p>RTO kills COD margins — we know. So before a COD order ships, we send one WhatsApp message to confirm the delivery address. 30 seconds for the customer, fewer refused parcels for us. ₹1,000 advance via UPI, balance on delivery.</p>
+      <h3>Not sure which condition to pick? Ask before you buy.</h3>
+      <p>Refurbished buyers hesitate on one thing: "what does Good actually look like on my unit?" Your WhatsApp support line already handles warranty claims — this flow flips it upstream. One thread answers condition, battery and delivery ETA for Riyadh, Jeddah and Dammam, then closes the order.</p>
       <div class="cod-steps">
-        <span class="step-chip"><b>1</b> Order placed</span>
-        <span class="step-chip"><b>2</b> WhatsApp address check</span>
-        <span class="step-chip"><b>3</b> Ships in 24 hrs</span>
+        <span class="step-chip"><b>1</b> Tap from the PDP</span>
+        <span class="step-chip"><b>2</b> Get tier photos + battery</span>
+        <span class="step-chip"><b>3</b> Order in the same thread</span>
       </div>
     </div>
     <div>
-      <a class="btn btn-primary" href="cod-flow.html">See the 60-second flow →</a>
+      <a class="btn btn-primary" href="consult-flow.html">See the 60-second flow →</a>
     </div>
   </div>
 </div>
 
 <footer class="site">
-  <b>Concept by NexG Tech</b> — redesign proposal for fonezone.com. Sample data for demonstration. Not a live product.<br>
-  Built from a live audit of fonezone.com on 16 Oct 2026.
+  <b>Concept by Nexg Tech</b> — redesign proposal for fonezone.me. Sample tier pricing for demonstration; base prices from live 128GB variants. Not a live product.<br>
+  Built from a live audit of fonezone.me on 16 Oct 2026.
 </footer>
 
 <div class="toast" id="toast">Added to cart</div>
 
 <div class="mobile-bar">
-  <div class="m-price">₹<span id="mPrice">10,560</span><small id="mGrade">Grade A</small></div>
+  <div class="m-price">SAR <span id="mPrice">1,000</span><small id="mGrade">Good</small></div>
   <button class="btn btn-primary" id="mAdd">Add to cart</button>
 </div>
 
 <script>
 const IMAGES = [
-  "https://cdn.shopify.com/s/files/1/0618/8761/0924/files/1_49992665-39f1-4604-87ff-a8d4ba96e870.jpg?v=1788631349",
-  "https://cdn.shopify.com/s/files/1/0618/8761/0924/files/Untitled_27_65_205ef355-a31a-4b83-9897-cff7c3fa75af.jpg?v=1788631348",
-  "https://cdn.shopify.com/s/files/1/0618/8761/0924/files/Untitled_27_63_2ea7b71e-9ef1-47c3-a750-04fffd5cbeda.jpg?v=1788631349",
-  "https://cdn.shopify.com/s/files/1/0618/8761/0924/files/Untitled_27_64_d651c033-fd44-4154-860c-8acc4305848e.jpg?v=1788631349",
-  "https://cdn.shopify.com/s/files/1/0618/8761/0924/files/Untitled_27_68_3cb6b6d1-7a18-4b53-9c56-08eb9f1fce7c.jpg?v=1788631349",
-  "https://cdn.shopify.com/s/files/1/0618/8761/0924/files/2_999e2947-9e53-4dc6-bcd0-4055fe69934c.jpg?v=1788631349",
-  "https://cdn.shopify.com/s/files/1/0618/8761/0924/files/Untitled_27_66_a6a9af2a-4bf1-4aa3-9a23-72b500242d86.jpg?v=1788631349",
-  "https://cdn.shopify.com/s/files/1/0618/8761/0924/files/Untitled_27_67_3e37ede0-9f89-49fd-ad64-8ff9ba63efdc.jpg?v=1788631348"
+  "https://cdn.shopify.com/s/files/1/0338/9947/9177/files/ip12blck_bc5c9461-4646-4dd4-8b2a-2266ad080c3d.jpg?v=1701343971",
+  "https://cdn.shopify.com/s/files/1/0338/9947/9177/files/ip12whte_94ff4e68-a427-4304-9968-de1c2382aa4d.jpg?v=1701343974",
+  "https://cdn.shopify.com/s/files/1/0338/9947/9177/files/ip12red_8bdf35c5-ae63-4ea8-85d3-c95c8f50e3d3.jpg?v=1701343978",
+  "https://cdn.shopify.com/s/files/1/0338/9947/9177/files/ip12green_6bb2c1e3-1c98-40d9-9e2b-3c6e9345c266.jpg?v=1701343982",
+  "https://cdn.shopify.com/s/files/1/0338/9947/9177/files/12purple_11973ff6-942c-4b78-a623-2198c479dd62.jpg?v=1701517837",
+  "https://cdn.shopify.com/s/files/1/0338/9947/9177/files/ip12blue_ebc159db-6e50-4264-adc6-e5ae07e3fc04.jpg?v=1701343988",
+  "https://cdn.shopify.com/s/files/1/0338/9947/9177/files/WhatsAppImage2023-07-27at8.23.19AM_e59ad5e8-7bae-4dc9-bc8f-20827ae8c212.jpg?v=1701343993",
+  "https://cdn.shopify.com/s/files/1/0338/9947/9177/files/d1007b17-9928-430e-8785-88282a2bb052_ccafddeb-c975-4c7c-81fd-0e1b824da9e4.jpg?v=1722964845"
 ];
 
 const FLAWS = {
-  a: [
-    {ok:true, text:"Screen glass: flawless, no scratches"},
-    {ok:false, text:"Up to 3 micro-scratches on the back logo area (see photo 2)"},
-    {ok:true, text:"Frame corners: no dents, no chips"},
-    {ok:true, text:"Original Apple display, not a third-party swap"}
-  ],
-  b: [
+  good: [
     {ok:true, text:"Screen glass: clean, no scratches you can feel"},
-    {ok:false, text:"Visible scuffs along the charging-port edge (photo 5)"},
-    {ok:false, text:"Light rubbing on the Apple logo"},
-    {ok:true, text:"Frame corners: no dents"}
+    {ok:false, text:"Light micro-marks on the frame edges (see photos 7–8)"},
+    {ok:true, text:"Back glass intact, no cracks or chips"},
+    {ok:true, text:"Original Apple display — not a third-party swap"}
   ],
-  c: [
-    {ok:false, text:"2–3 visible scratches on the screen glass (photo 3)"},
-    {ok:false, text:"Scuffs across the full back panel"},
-    {ok:true, text:"Touch response 100% across the display"},
-    {ok:false, text:"Small paint chip, bottom-left corner"}
+  very: [
+    {ok:true, text:"Screen glass: flawless"},
+    {ok:false, text:"Faint polish marks on the Apple logo, only under light"},
+    {ok:true, text:"Frame corners: no dents"},
+    {ok:true, text:"Looks near-new at normal viewing distance"}
+  ],
+  exc: [
+    {ok:true, text:"Screen glass: flawless"},
+    {ok:true, text:"Frame: no visible marks at arm's length"},
+    {ok:true, text:"Fewer than 200 charge cycles — battery health 95%+"},
+    {ok:true, text:"Presentation close to sealed-box condition"}
   ]
 };
 
+const GRADE_NAMES = {good:'Good', very:'Very Good', exc:'Excellent'};
 const mainImg = document.getElementById('mainImg');
 const thumbs = document.getElementById('thumbs');
 IMAGES.forEach((src, i) => {
@@ -446,7 +459,19 @@ IMAGES.forEach((src, i) => {
   thumbs.appendChild(b);
 });
 
-function fmt(n){ return n.toLocaleString('en-IN'); }
+document.querySelectorAll('.swatch').forEach(sw => {
+  sw.addEventListener('click', () => {
+    document.querySelectorAll('.swatch').forEach(x => x.classList.remove('active'));
+    sw.classList.add('active');
+    const idx = +sw.dataset.img;
+    mainImg.src = IMAGES[idx];
+    thumbs.querySelectorAll('button').forEach((x,i) => x.classList.toggle('active', i===idx));
+    document.getElementById('colorLabel').textContent = sw.dataset.name;
+    document.getElementById('subtitle').textContent = `128GB · ${sw.dataset.name} · Unlocked · Ready to ship`;
+  });
+});
+
+function fmt(n){ return n.toLocaleString('en-US'); }
 
 function renderFlaws(grade){
   const list = document.getElementById('flawList');
@@ -458,7 +483,7 @@ function renderFlaws(grade){
       : `<svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#6b7f92" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="#6b7f92"/></svg><span>${f.text}</span>`;
     list.appendChild(li);
   });
-  document.getElementById('flawGrade').textContent = 'Grade ' + grade.toUpperCase();
+  document.getElementById('flawGrade').textContent = GRADE_NAMES[grade];
 }
 
 document.querySelectorAll('.grade').forEach(btn => {
@@ -467,26 +492,26 @@ document.querySelectorAll('.grade').forEach(btn => {
     btn.classList.add('active');
     const price = +btn.dataset.price;
     const batt = +btn.dataset.batt;
+    const gname = GRADE_NAMES[btn.dataset.grade];
     document.getElementById('priceVal').textContent = fmt(price);
-    document.getElementById('ctaPrice').textContent = '₹' + fmt(price);
+    document.getElementById('ctaPrice').textContent = fmt(price);
     document.getElementById('mPrice').textContent = fmt(price);
-    document.getElementById('mGrade').textContent = 'Grade ' + btn.dataset.grade.toUpperCase();
+    document.getElementById('mGrade').textContent = gname;
     document.getElementById('priceMeta').textContent =
-      'Grade ' + btn.dataset.grade.toUpperCase() + ' price · warranty included · no hidden fees at checkout';
+      `${gname} condition · whole riyals, always · warranty included · no hidden fees at checkout`;
     document.getElementById('battVal').textContent = batt + '%';
     document.getElementById('cycVal').textContent = btn.dataset.cycles;
     const arc = document.getElementById('battArc');
     arc.setAttribute('stroke-dashoffset', 314 - 314 * batt / 100);
-    arc.setAttribute('stroke', batt >= 85 ? '#0f8a5f' : batt >= 80 ? '#1557c0' : '#b8860b');
     renderFlaws(btn.dataset.grade);
   });
 });
-renderFlaws('a');
+renderFlaws('good');
 
 let qty = 1;
 const qVal = document.getElementById('qVal');
 document.getElementById('qMinus').addEventListener('click', () => { if(qty>1){qty--; qVal.textContent=qty;} });
-document.getElementById('qPlus').addEventListener('click', () => { if(qty<3){qty++; qVal.textContent=qty;} else showToast('Max 3 per customer — this is a single used unit, not a warehouse'); });
+document.getElementById('qPlus').addEventListener('click', () => { if(qty<3){qty++; qVal.textContent=qty;} else showToast('Max 3 per customer — single used units, not warehouse stock'); });
 
 const toast = document.getElementById('toast');
 let toastT;
@@ -496,8 +521,14 @@ function showToast(msg){
   clearTimeout(toastT);
   toastT = setTimeout(() => toast.classList.remove('show'), 2600);
 }
-document.getElementById('addBtn').addEventListener('click', () => showToast(`Added: iPhone 7 256GB · Grade ${document.querySelector('.grade.active').dataset.grade.toUpperCase()} × ${qty}`));
-document.getElementById('mAdd').addEventListener('click', () => showToast(`Added: iPhone 7 256GB · Grade ${document.querySelector('.grade.active').dataset.grade.toUpperCase()} × ${qty}`));
+function currentGrade(){ return GRADE_NAMES[document.querySelector('.grade.active').dataset.grade]; }
+function currentColor(){ return document.getElementById('colorLabel').textContent; }
+const addMsg = () => `Added: iPhone 12 128GB · ${currentColor()} · ${currentGrade()} × ${qty}`;
+document.getElementById('addBtn').addEventListener('click', () => showToast(addMsg()));
+document.getElementById('mAdd').addEventListener('click', () => showToast(addMsg()));
+document.querySelectorAll('.protect .add').forEach(b => {
+  b.addEventListener('click', () => showToast(`${b.dataset.add} added — ${addMsg()}`));
+});
 </script>
 </body>
 </html>

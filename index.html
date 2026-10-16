@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>3 fixes spotted on fonezone.com — NexG Tech</title>
+<title>3 fixes spotted on fonezone.me — NexG Tech</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root{
     --ink:#0f2438;--ink-2:#3d5266;--muted:#6b7f92;--line:#e3eaf1;
-    --blue:#1557c0;--blue-dark:#0f4396;--green:#0f8a5f;--amber:#b8860b;
+    --blue:#1557c0;--blue-dark:#0f4396;--green:#0f8a5f;
     --bg-soft:#f6f9fc;
   }
   *{box-sizing:border-box;margin:0;padding:0}
@@ -22,10 +22,16 @@
 
   .hero{max-width:1060px;margin:0 auto;padding:52px 20px 10px}
   .hero .kicker{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
-  .hero h1{font-size:40px;font-weight:800;letter-spacing:-.025em;line-height:1.12;margin-top:10px;max-width:20ch}
-  .hero p{font-size:16px;color:var(--ink-2);margin-top:14px;max-width:62ch}
+  .hero h1{font-size:40px;font-weight:800;letter-spacing:-.025em;line-height:1.12;margin-top:10px;max-width:22ch}
+  .hero p{font-size:16px;color:var(--ink-2);margin-top:14px;max-width:64ch}
   .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
   .chip{font-size:12.5px;font-weight:600;color:var(--ink-2);border:1px solid var(--line);border-radius:999px;padding:6px 13px;background:var(--bg-soft)}
+
+  .good{max-width:1060px;margin:26px auto 0;padding:0 20px}
+  .good-inner{border:1px solid #cfe8dc;background:#f3fbf7;border-radius:16px;padding:22px 26px}
+  .good h3{font-size:15px;font-weight:800;color:var(--green);display:flex;align-items:center;gap:8px}
+  .good ul{margin:10px 0 0 18px;color:var(--ink-2);font-size:14px}
+  .good li{margin:5px 0}
 
   .wrap{max-width:1060px;margin:0 auto;padding:20px 20px 60px}
 
@@ -45,7 +51,7 @@
   .after{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .after-inner{max-width:1060px;margin:0 auto;padding:56px 20px}
   .after h2{font-size:28px;font-weight:800;letter-spacing:-.02em}
-  .after > p{color:var(--ink-2);font-size:15px;margin-top:10px;max-width:60ch}
+  .after > p{color:var(--ink-2);font-size:15px;margin-top:10px;max-width:62ch}
   .cards{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
   .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px;display:flex;flex-direction:column}
   .card .ic{width:40px;height:40px;border-radius:11px;background:#eaf1fc;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
@@ -77,16 +83,30 @@
 </head>
 <body>
 
-<div class="top"><b>FoneZone · October 2026</b> · live crawl of fonezone.com — free findings, no strings</div>
+<div class="top"><b>FoneZone · fonezone.me</b> · live crawl 16 Oct 2026 — free findings, no strings</div>
 
 <div class="hero">
-  <div class="kicker">NexG Tech · site review</div>
-  <h1>3 quick fixes for fonezone.com</h1>
-  <p>We ran a full crawl of your storefront — desktop, mobile, product pages, search, checkout paths. The catalogue and ops behind it are solid. These three things, though, leak trust on pages you already pay traffic for. Each one below is captured from your live site on 16 Oct 2026, with the exact code that causes it.</p>
+  <div class="kicker">Nexg Tech · site review</div>
+  <h1>3 quick fixes for fonezone.me</h1>
+  <p>We crawled your Saudi storefront end to end — desktop, mobile, product pages, warranty terms, currency flows. The bones are genuinely good: honest "-X% vs new" badges, a consistent 12-month warranty backed by real terms, condition tiers already in place. These three things, though, leak trust on the pages your customers actually land on. Each is captured from the live site on 16 Oct 2026.</p>
   <div class="meta">
-    <span class="chip">Sources: fonezone.com + fonezone.me</span>
+    <span class="chip">Source: fonezone.me (Saudi storefront)</span>
     <span class="chip">Captured 16 Oct 2026</span>
     <span class="chip">No meeting required — fix these first</span>
+  </div>
+</div>
+
+<div class="good">
+  <div class="good-inner">
+    <h3>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0f8a5f" stroke-width="3" stroke-linecap="round"/></svg>
+      Credit where it's due
+    </h3>
+    <ul>
+      <li>Discount badges are honest — "-11% vs new", "-60% vs new" — real math, clear framing</li>
+      <li>12-month warranty is consistent across cards, trust bar, and a properly written terms page</li>
+      <li>Condition tiers (Good / Very Good / Excellent) already exist — a strong base most refurb stores don't have</li>
+    </ul>
   </div>
 </div>
 
@@ -96,31 +116,32 @@
   <section class="fix">
     <figure class="proof">
       <div class="frame">
-        <img src="proof/before_discount_REVEALED.png" alt="fonezone.com predictive search showing iPhone 7 priced at Rs. 10,560.39 with a red (--2547%) discount badge">
+        <img src="proof/me_inr_cards.png" alt="fonezone.me showing Indian Rupee prices with paise on product cards for the Saudi storefront">
       </div>
-      <figcaption>Live predictive search on fonezone.com, 16 Oct 2026. The red badge is rendered from corrupt <code>compare_at</code> values in the product data.</figcaption>
+      <figcaption>Live fonezone.me from an India IP, 16 Oct 2026 — every card priced in ₹ INR with piasters, India-flag currency switcher, Saudi title above.</figcaption>
     </figure>
     <div>
       <div class="fix-num">1</div>
-      <h2>Discount badges read “(–2547%)”</h2>
-      <p class="tagline">A shopper's first glance lands on broken math. Broken math reads as “what else on this site is broken?”</p>
+      <h2>Saudi store, Indian rupees — with piasters</h2>
+      <p class="tagline">Open fonezone.me from India — as your own team does — and the "Saudi Arabia" store prices everything in ₹122,022.15 INR.</p>
       <div class="block">
         <h4>What we found</h4>
-        <p>Your product cards and search results compute discount % from compare-at prices that were never cleaned up during import — values like ₹1,424,900 on a ₹10,560 phone. The badge prints the negative result instead of hiding it.</p>
+        <p>The currency switcher auto-selects INR for India IPs, then converts keeping two decimals — so every card reads like a currency-conversion bug. Even in SAR, many prices carry piasters: SAR 750.67, SAR 4,025.37, while others sit clean at SAR 4,872.00. The switcher itself offers 170+ currencies — Bitcoin, North Korean Won, Afghan Afghani — with Saudi Riyal buried mid-list.</p>
         <div class="cite">
-          data-compare="1424900" ×4 &nbsp;·&nbsp; data-compare="39900" ×4 &nbsp;·&nbsp; data-compare="14900" ×4<br>
-          badge text: "(--2547%)" ×4 &nbsp;·&nbsp; "(--3793%)" ×4 &nbsp;·&nbsp; "(-0%)" ×12
+          rendered: "₹ 122,022.15 INR" · "₹ 79,369.49 INR" · "₹ 44,781.53 INR" (every card)<br>
+          SAR view: "750.67 SAR - 1,275.39 SAR" · "4,025.37 SAR" vs clean "4,872.00 SAR"<br>
+          switcher options: 170+ incl. "Bitcoin", "North Korean Won"; SAR not default-curated
         </div>
       </div>
       <div class="block">
         <h4>Why it costs sales</h4>
-        <p>Used-phone buyers are already risk-sensitive. A store that can't do percentage arithmetic invites the question they fear most: “is this unit what it says it is?”</p>
+        <p>A Gulf shopper who lands on INR — or sees piasters next to riyals — reads "this store can't decide what currency it's in." For a refurbished buyer about to hand over SAR 1,000+ for a used phone, arithmetic hygiene is trust hygiene.</p>
       </div>
       <div class="block">
         <h4>The fix</h4>
-        <p>Strip corrupt compare-at values, or show a badge only when the math is real. On the concept PDP we rebuilt for your iPhone 7: one honest price, no fake MRP, no percentage at all — <a href="pdp-after.html">see it here</a>.</p>
+        <p>Round every price to whole riyals. Curate the switcher to three currencies max (SAR default, AED, INR for the diaspora). Auto-select by market, not IP guesswork. On the concept PDP we rebuilt: <a href="pdp-after.html">SAR 750, no piasters, one currency story</a>.</p>
       </div>
-      <span class="badge-cost">Trust leak · affects every product card</span>
+      <span class="badge-cost">Trust leak · every card, every visitor</span>
     </div>
   </section>
 
@@ -128,32 +149,32 @@
   <section class="fix">
     <figure class="proof">
       <div class="frame">
-        <img src="proof/audit_real_com_scroll.png" alt="fonezone.com listing showing '12 MONTHS WARRANTY' badges alongside decimal pricing and truncated 'Part Change' titles">
+        <img src="proof/me_uae_on_saudi.png" alt="fonezone.me header showing UAE phone number and UAE geopolitical shipping banner on the Saudi storefront">
       </div>
-      <figcaption>Category page, same crawl. “12 MONTHS WARRANTY” badges sit under a top bar that says “Upto 6 months warranty”.</figcaption>
+      <figcaption>Live fonezone.me header and announcement bar, 16 Oct 2026. UAE number, UAE delay notice — on a store titled "Saudi Arabia".</figcaption>
     </figure>
     <div>
       <div class="fix-num">2</div>
-      <h2>Warranty says three different numbers</h2>
-      <p class="tagline">6 months in the top bar. 12 months on the cards. “Life Time Warranty” four more times in the page source.</p>
+      <h2>The Saudi store keeps wearing UAE clothes</h2>
+      <p class="tagline">Support number in +971. A shipping-delay notice about the UAE. On a storefront whose own title tag says "Best Refurbished Mobile Phone in Saudi Arabia."</p>
       <div class="block">
         <h4>What we found</h4>
-        <p>One page of fonezone.com carries all three claims simultaneously — in the announcement bar, the product-card badges, and embedded section text. A buyer comparing two phones can't tell which promise applies to which unit.</p>
+        <p>The header and footer list Customer Support as +971 565069120 — a UAE number — on the KSA storefront. The announcement bar warns of "current geopolitical conditions in the UAE" shipping delays. A second notice says Tabby is "currently unavailable" due to technical issues — a live payment rail announced as down, on every page.</p>
         <div class="cite">
-          "Upto 6 months warranty" ×1 (top bar, every page)<br>
-          "12 Months Warranty" ×14 (product cards)<br>
-          "Life Time Warranty" ×4 (section copy)
+          header/footer: "Customer Support +971 565069120"<br>
+          announcement: "Due to current geopolitical conditions in the UAE, shipping and service timelines may experience temporary delays"<br>
+          announcement: "Due to some technical issues, Tabby is currently unavailable"
         </div>
       </div>
       <div class="block">
         <h4>Why it costs sales</h4>
-        <p>Warranty is the #1 objection in used-phone retail. Contradiction turns an objection into a support ticket — or worse, a chargeback when the invoice says something the banner didn't.</p>
+        <p>A Riyadh buyer seeing a UAE number and UAE war-risk language asks a simple question: "who am I actually buying from, and where does this ship from?" Uncertainty at the support-line stage becomes refused deliveries later.</p>
       </div>
       <div class="block">
         <h4>The fix</h4>
-        <p>One number, everywhere: banner, card, PDP, invoice, WhatsApp receipt. If a unit genuinely carries a different term, say it on that unit — not as a second global claim. We used your own header's number (6 months) throughout the <a href="pdp-after.html">concept PDP</a>.</p>
+        <p>KSA support number on the KSA store (and keep the KSA number on WhatsApp — your warranty process already directs claims there). UAE notices belong on the UAE property or geofenced by market. Tabby/Tamara status should be dynamic, not a frozen apology.</p>
       </div>
-      <span class="badge-cost">Support + chargeback risk · every page</span>
+      <span class="badge-cost">Market confusion · header, footer, every page</span>
     </div>
   </section>
 
@@ -161,31 +182,33 @@
   <section class="fix">
     <figure class="proof">
       <div class="frame">
-        <img src="proof/audit_real_com_pdp.png" alt="fonezone.com product detail for iPhone 7 showing price Rs. 10,560.39 with decimals">
+        <img src="proof/me_pdp_sar_full.png" alt="fonezone.me iPhone 12 product page in SAR showing price range with piasters and variant picker">
       </div>
-      <figcaption>Live PDP for iPhone 7 256GB. Price renders as ₹10,560.39 — paise on a phone sale, currency-conversion style.</figcaption>
+      <figcaption>Live PDP: /products/apple-iphone-12-128gb-grade — the link promises 128GB; the page opens with 64GB selected and hardcodes 64GB in the specs table.</figcaption>
     </figure>
     <div>
       <div class="fix-num">3</div>
-      <h2>Decimal prices + “Part Change” jargon in titles</h2>
-      <p class="tagline">₹17,560.33 and “Apple iPhone 12 mini 128GB Green Good (Part Change…” — words your customer doesn't know, in the one line they always read.</p>
+      <h2>Product links that don't match the product</h2>
+      <p class="tagline">A shared link says 128GB. The page opens on 64GB. The specs table never changes. Whoever clicks that link from Google or WhatsApp gets a different phone than the one promised.</p>
       <div class="block">
         <h4>What we found</h4>
-        <p>Prices render to two decimals site-wide (₹10,560.39, ₹25,400.37, ₹17,560.33). Product titles include internal grading notes — “(Part Change Message)” appears 30 times in site source — and truncate mid-phrase on cards.</p>
+        <p>The product URL <code>apple-iphone-12-128gb-grade</code> loads with Storage = 64GB pre-selected. The specifications table hardcodes "Internal storage — 64GB" regardless of which variant the buyer picks. The SKU field dumps two internal codes: "FMMRAP1264BCGO, 010113-060101". And there's no review or rating widget on a refurbished PDP — zero social proof where the hesitation is highest.</p>
         <div class="cite">
-          "Part Change Message" ×30 in site source<br>
-          "Rs. 10,560.39" · "Rs. 17,560.33" · "Rs. 25,400.37"
+          url: /products/apple-iphone-12-128gb-grade<br>
+          checked: Storage=64GB, Color=Black, Condition=Good<br>
+          specs: "Internal storage&nbsp;&nbsp;64GB" (static, ignores 128/256 selection)<br>
+          sku: "FMMRAP1264BCGO, 010113-060101"
         </div>
       </div>
       <div class="block">
         <h4>Why it costs sales</h4>
-        <p>Paise on a phone reads like an FX glitch, not a price. “Part Change” is your internal grading language leaking into the storefront — shoppers skip what they can't parse, and truncated titles kill the comparison shopping that drives AOV.</p>
+        <p>Every SEO page, WhatsApp share, and paid ad deep-links into a variant. If the link lands on the wrong storage, you either lose the sale instantly — or win it and create a return. Both outcomes are worse than the fix.</p>
       </div>
       <div class="block">
         <h4>The fix</h4>
-        <p>Round to ₹. Translate internal notes into the grade system buyers already understand (A / B / C with disclosed flaws) — which is exactly what the <a href="pdp-after.html">concept PDP</a> does, using your real product photos.</p>
+        <p>Variant-aware deep links (URL opens the variant it names), spec tables driven by variant data, one clean SKU, and a review widget fed by your post-delivery WhatsApp ask. The <a href="pdp-after.html">concept PDP</a> shows the iPhone 12 done the way we'd ship it — 128GB pre-selected, specs that follow the variant, whole-riyal pricing.</p>
       </div>
-      <span class="badge-cost">Conversion drag · titles + prices site-wide</span>
+      <span class="badge-cost">Direct revenue leak · every shared link</span>
     </div>
   </section>
 
@@ -194,23 +217,23 @@
 <div class="after">
   <div class="after-inner">
     <h2>We didn't just write them up — we built the after</h2>
-    <p>Two working pages, built from your live catalogue data and product photos. Open them on a phone; they were designed mobile-first, like your traffic.</p>
+    <p>Two working pages built from your live catalogue: real product photos, real prices (rounded), your own condition tiers. Open them on a phone.</p>
     <div class="cards">
       <div class="card">
         <div class="ic">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="6" y="2" width="12" height="20" rx="2.5" stroke="#1557c0" stroke-width="2"/><circle cx="12" cy="18.5" r="1" fill="#1557c0"/></svg>
         </div>
         <h3>Reimagined product page</h3>
-        <p>Your iPhone 7 256GB, rebuilt: honest ₹10,560, Grade A/B/C with per-grade flaw lists, measured battery health, 32-point inspection summary, one warranty number. Real photos, pulled from your Shopify CDN.</p>
+        <p>Your iPhone 12 128GB, rebuilt: SAR 750 (no piasters), your Good / Very Good / Excellent tiers with per-tier flaw disclosure, measured battery health, 12-month warranty stated once, Tabby &amp; Tamara shown as working rails. Real photos from your CDN.</p>
         <a href="pdp-after.html">Open the concept PDP →</a>
       </div>
       <div class="card">
         <div class="ic">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3z" stroke="#1557c0" stroke-width="2"/><path d="M8.5 10.5c.5 3 2.5 4.8 5.2 5.4l1.3-1.3 2 .9-.4 1.6c-3.9.4-7.7-2.9-8.4-7l1.6-.4.9 2-2.2-1.2z" fill="#1557c0"/></svg>
         </div>
-        <h3>COD address check on WhatsApp</h3>
-        <p>One pre-approved message confirms the delivery address before a COD unit ships — quick-reply buttons, optional ₹1,000 UPI advance in the same thread. Runs on WhatsApp Business API; no new app for you or the buyer.</p>
-        <a href="cod-flow.html">Watch the 60-second flow →</a>
+        <h3>WhatsApp pre-purchase concierge</h3>
+        <p>Refurbished buyers hesitate on condition and battery. Your warranty process already routes claims through WhatsApp — this flips it upstream: one thread answers "what does Good actually look like?" and closes the order. Gulf buyers live in that thread anyway.</p>
+        <a href="consult-flow.html">Watch the flow →</a>
       </div>
     </div>
   </div>
@@ -220,17 +243,17 @@
   <h2>What we'd do next, if you want us to</h2>
   <p>In this order, smallest first:</p>
   <ul>
-    <li><b>Same week:</b> bulk-clean corrupt compare-at values and hide badges where the math fails — pure data fix, no theme work.</li>
-    <li><b>Same week:</b> collapse warranty copy to one number across banner, cards and PDP.</li>
-    <li><b>Next sprint:</b> grade system (A/B/C) wired into Shopify metafields, titles cleaned of internal notes, prices rounded at the template level.</li>
-    <li><b>Then:</b> WhatsApp COD confirmation on the existing support number — template approval + a small Flow, roughly two weeks end to end.</li>
+    <li><b>Same week:</b> round all prices to whole riyals at the theme level; cut the currency switcher to SAR / AED / INR.</li>
+    <li><b>Same week:</b> KSA number on the KSA store; move UAE notices to the UAE property or geofence them.</li>
+    <li><b>Next sprint:</b> variant-aware deep links + spec tables tied to variant data + single SKU; review widget on PDPs.</li>
+    <li><b>Then:</b> WhatsApp concierge pilot on one collection — template approval + flow, roughly two weeks end to end.</li>
   </ul>
-  <p style="margin-top:18px">No deck, no meeting needed to start on the data fixes. If you want the PDP-grade system built on your actual Shopify theme, that's a 30-minute call — but only when you're ready.</p>
+  <p style="margin-top:18px">No deck, no meeting needed to start on the first two. If you want the PDP work on your actual Shopify theme, that's a 30-minute call — only when you're ready.</p>
 </div>
 
 <footer>
-  <b>NexG Tech</b> · prepared for Hemant Verma, FoneZone · 16 Oct 2026<br>
-  All findings captured from live fonezone.com / fonezone.me. Concept pages are proposals, not deployed changes.
+  <b>Nexg Tech</b> · prepared for Hemant Verma, FoneZone · 16 Oct 2026<br>
+  All findings captured from live fonezone.me. Concept pages are proposals, not deployed changes.
 </footer>
 
 </body>

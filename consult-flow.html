@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>COD Address Verification — WhatsApp Flow Concept · FoneZone</title>
+<title>WhatsApp Pre-Purchase Concierge — FoneZone Concept Flow</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -22,11 +22,10 @@
 
   .head{max-width:1100px;margin:0 auto;padding:40px 20px 8px;text-align:center}
   .head h1{font-size:32px;font-weight:800;letter-spacing:-.02em}
-  .head p{color:var(--ink-2);font-size:15px;margin-top:10px;max-width:62ch;margin-left:auto;margin-right:auto}
+  .head p{color:var(--ink-2);font-size:15px;margin-top:10px;max-width:64ch;margin-left:auto;margin-right:auto}
 
   .stage{max-width:1100px;margin:0 auto;padding:34px 20px 60px;display:grid;grid-template-columns:390px 1fr;gap:48px;align-items:start}
 
-  /* phone */
   .phone{background:#111;border-radius:36px;padding:12px;box-shadow:0 24px 60px rgba(15,36,56,.25);width:390px;max-width:100%;margin:0 auto;position:sticky;top:24px}
   .phone-screen{background:var(--wa-bg);border-radius:26px;overflow:hidden;height:680px;display:flex;flex-direction:column}
   .wa-top{background:#075e54;color:#fff;padding:12px 14px;display:flex;align-items:center;gap:11px}
@@ -44,7 +43,10 @@
   .bub .tick{color:#34b7f1;font-weight:700;margin-left:3px}
   .bub b{font-weight:700}
   .bub .row{margin:3px 0}
-  .bub .upi{background:#fff;border:1px dashed #c9d6c0;border-radius:8px;padding:8px 10px;margin-top:6px;font-size:12.5px}
+  .bub .photos{display:flex;gap:6px;margin-top:6px}
+  .bub .photos img{width:120px;height:120px;object-fit:cover;border-radius:8px;border:1px solid #e5e0d8}
+  .bub .card-link{display:block;background:#fff;border:1px solid #cfe3f5;border-radius:8px;padding:10px;margin-top:6px;font-size:12.5px}
+  .bub .card-link b{display:block;margin-bottom:2px}
   .quick{display:flex;gap:8px;align-self:flex-end;max-width:82%;opacity:0;transform:translateY(10px);transition:all .35s}
   .quick.show{opacity:1;transform:none}
   .quick button{flex:1;background:#fff;border:1px solid #cfe3f5;color:var(--blue);font-weight:700;font-size:12.5px;padding:9px 8px;border-radius:8px;cursor:pointer;font-family:inherit}
@@ -58,7 +60,6 @@
   .ctrl button.primary{background:var(--blue);border-color:var(--blue);color:#fff}
   .ctrl button:disabled{opacity:.4;cursor:default}
 
-  /* right panel */
   .panel h2{font-size:22px;font-weight:800;letter-spacing:-.01em}
   .panel .lede{color:var(--ink-2);font-size:14.5px;margin-top:8px}
   .steps{margin-top:26px;display:grid;gap:14px}
@@ -90,8 +91,8 @@
 <div class="top"><b>Concept flow</b> · part of the FoneZone repitch pack · <a href="index.html">← back to the 3 fixes</a></div>
 
 <div class="head">
-  <h1>COD that doesn't die at the door</h1>
-  <p>One WhatsApp message confirms the address before a COD order ships. 30 seconds for the customer. Fewer refused parcels, lower RTO for FoneZone. Runs on WhatsApp Business API — no new app for anyone.</p>
+  <h1>Ask before you buy — on WhatsApp</h1>
+  <p>Refurbished buyers hesitate on one question: "what does this condition actually look like?" FoneZone's warranty process already runs on WhatsApp — this flips the thread upstream, from claims to pre-purchase. One conversation answers condition, battery and delivery, then closes the order.</p>
 </div>
 
 <div class="stage">
@@ -102,7 +103,7 @@
           <div class="wa-avatar">FZ</div>
           <div>
             <div class="wa-name">FoneZone</div>
-            <div class="wa-status">business account · typically replies in minutes</div>
+            <div class="wa-status">business account · replies during KSA hours</div>
           </div>
         </div>
         <div class="wa-chat" id="chat">
@@ -119,51 +120,51 @@
   </div>
 
   <div class="panel">
-    <h2>What just happened, and why it pays for itself</h2>
-    <p class="lede">Most COD RTO isn't fraud — it's typos, guest-checkout fake numbers, and "I didn't order this" at the door. A 30-second confirmation catches the cheap mistakes before a parcel crosses three states.</p>
+    <h2>Why this belongs on fonezone.me</h2>
+    <p class="lede">Gulf buyers message before they buy — especially used devices. Your floating WhatsApp button and warranty-claims process already prove the channel works; this just moves it two steps earlier, where it saves a sale instead of rescuing one.</p>
 
     <div class="steps" id="steps">
       <div class="step" data-step="0">
         <div class="n">1</div>
         <div>
-          <h3>Order lands, message fires instantly</h3>
-          <p>The moment a COD order is placed, WhatsApp sends the summary. Customer sees the exact model, grade and price they committed to — no surprises at the door.</p>
+          <h3>Buyer taps the PDP, thread opens prefilled</h3>
+          <p>The "Ask on WhatsApp" button carries the product context — model, storage, the condition they were viewing. No "hello? is this available?" from scratch.</p>
         </div>
       </div>
       <div class="step" data-step="1">
         <div class="n">2</div>
         <div>
-          <h3>Address shown back, one tap to confirm</h3>
-          <p>Quick-reply buttons, not a form. "This is correct" or "Edit address". Typing a full address on WhatsApp is why most verification flows fail — taps don't.</p>
+          <h3>Honest condition answer + real photos</h3>
+          <p>Agent replies in plain language — "Good means micro-marks on the frame, screen glass is clean" — and sends photos of a current Good unit. Honesty here kills the return that a vague "excellent condition!" creates.</p>
         </div>
       </div>
       <div class="step" data-step="2">
         <div class="n">3</div>
         <div>
-          <h3>Confirmed → order ships next day</h3>
-          <p>Unconfirmed after 24 hrs? Order pauses with a human follow-up call, not an automatic cancel. The customer stays in control; the parcel doesn't move blind.</p>
+          <h3>Battery, delivery, instalments — same thread</h3>
+          <p>Cycles, health %, Riyadh delivery ETA, Tabby in four interest-free payments. The three questions every refurbished buyer asks, answered once, reusable for the next buyer too.</p>
         </div>
       </div>
       <div class="step" data-step="3">
         <div class="n">4</div>
         <div>
-          <h3>Optional: ₹1,000 UPI advance, same thread</h3>
-          <p>For higher-value COD, the partial advance link lives in the same chat. One thread from order to delivery tracking — no email, no separate dashboard.</p>
+          <h3>Close in the thread, hold the unit</h3>
+          <p>Product link + "reply BUY and I'll hold this unit for 2 hours." A hold beats an abandoned cart, and the conversation history becomes the order record.</p>
         </div>
       </div>
     </div>
 
     <div class="stats">
-      <div class="stat"><b>~30s</b><span>Customer time to confirm — under one WhatsApp round-trip</span></div>
-      <div class="stat"><b>1 msg</b><span>Template, pre-approved on WhatsApp Business API</span></div>
-      <div class="stat"><b>₹0</b><span>New app or login for the customer</span></div>
+      <div class="stat"><b>~90s</b><span>Typical thread from question to "send the link"</span></div>
+      <div class="stat"><b>1 tap</b><span>PDP → prefilled WhatsApp, no app install, no login</span></div>
+      <div class="stat"><b>0</b><span>New tools for your support team — same WhatsApp they already use</span></div>
     </div>
 
-    <p class="note">Every message is a WhatsApp template (HSM) — approved once, reused forever. FoneZone's existing support number can be the sender; customers already trust that thread for order updates.</p>
+    <p class="note">Runs on WhatsApp Business API with saved replies for the top condition/battery/delivery questions. Your existing support number stays the sender — the number customers already trust for warranty claims.</p>
   </div>
 </div>
 
-<footer><b>Concept by NexG Tech</b> — for fonezone.com. Chat content is illustrative. Not a live FoneZone account.</footer>
+<footer><b>Concept by Nexg Tech</b> — for fonezone.me. Chat content is illustrative. Not a live FoneZone account.</footer>
 
 <script>
 const chat = document.getElementById('chat');
@@ -172,34 +173,21 @@ const backBtn = document.getElementById('backBtn');
 const replayBtn = document.getElementById('replayBtn');
 const stepCards = document.querySelectorAll('.step');
 
-// step index = how many bubbles/quick-rows are shown (0..8 total beats)
+const IMG_BLCK = "https://cdn.shopify.com/s/files/1/0338/9947/9177/files/ip12blck_bc5c9461-4646-4dd4-8b2a-2266ad080c3d.jpg?v=1701343971";
+const IMG_DETAIL = "https://cdn.shopify.com/s/files/1/0338/9947/9177/files/d1007b17-9928-430e-8785-88282a2bb052_ccafddeb-c975-4c7c-81fd-0e1b824da9e4.jpg?v=1722964845";
+
 const SCRIPT = [
-  {type:'in', html:`Hi Priya 👋<div class="row">Your FoneZone order is confirmed:</div><div class="row"><b>Apple iPhone 7 · 256GB · Jet Black</b><br>Grade A · ₹10,560 · COD (₹1,000 advance)</div><div class="row">Order <b>#FZ-2841</b>`, step:0},
-  {type:'in', html:`To ship it, can you confirm this delivery address?<div class="row"><b>Priya Sharma</b><br>402, Shanti Residency, Linking Road<br>Bandra West, Mumbai 400050<br>Mob. +91 98••••••42</div>`, step:1},
-  {type:'quick', options:['This is correct','Edit address'], step:1},
-  {type:'out', html:`This is correct<span class="tick">✓✓</span><span class="t">10:42</span>`, step:1},
-  {type:'in', html:`Address confirmed ✅<div class="row">Your order ships <b>tomorrow by 2 PM</b> via BlueDart. Tracking link follows here.</div><div class="row">Warranty starts from the day it's delivered — 6 months, on this thread if anything goes wrong.</div>`, step:2},
-  {type:'in', html:`For COD, an advance of <b>₹1,000</b> locks the unit. Pay by UPI — balance ₹9,560 in cash at the door:<div class="upi">💳 fonezone@ybl · ₹1,000<br><span style="color:var(--muted)">Tap to pay in any UPI app</span></div>`, step:3}
+  {type:'out', html:`Hi FoneZone — iPhone 12 128GB, is the Good condition really fine? A bit worried about marks.<span class="tick">✓✓</span><span class="t">14:02</span>`, step:0},
+  {type:'in', html:`Good question — "Good" on our scale means light micro-marks on the frame; screen glass is clean, no scratches you can feel.<div class="row">These are photos of a current Good unit (Black, 128GB):</div><div class="photos"><img src="${IMG_BLCK}" alt="Good unit front"><img src="${IMG_DETAIL}" alt="Good unit detail"></div><div class="row">If you want closer-to-new, Very Good is SAR 1,150 and Excellent SAR 1,275.</div>`, step:1},
+  {type:'out', html:`Battery health? And delivery to Riyadh?<span class="tick">✓✓</span><span class="t">14:04</span>`, step:2},
+  {type:'in', html:`The Good units in stock are at <b>89% battery health</b>, ~380 cycles — printed on the invoice, and covered for 12 months.<div class="row">Riyadh: <b>1–2 working days</b>, ships tomorrow if you confirm today. Pay with Mada, Visa, or <b>Tabby in 4 × SAR 250, interest-free</b>.</div>`, step:2},
+  {type:'out', html:`Perfect — send me the link please<span class="tick">✓✓</span><span class="t">14:05</span>`, step:3},
+  {type:'in', html:`Here you go:<div class="card-link"><b>Apple iPhone 12 · 128GB · Black · Good</b>SAR 1,000 · 12-month warranty · fonezone.me</div><div class="row">Reply <b>BUY</b> and I'll hold this unit for 2 hours — no payment needed until you're sure.</div>`, step:3}
 ];
 
 let idx = 0;
-let elCount = 0;
 
 function addBubble(item){
-  if(item.type === 'quick'){
-    const q = document.createElement('div');
-    q.className = 'quick';
-    item.options.forEach((opt, i) => {
-      const b = document.createElement('button');
-      b.textContent = opt;
-      b.disabled = true;
-      if(i===0) b.dataset.main = '1';
-      q.appendChild(b);
-    });
-    chat.appendChild(q);
-    requestAnimationFrame(() => q.classList.add('show'));
-    return q;
-  }
   const b = document.createElement('div');
   b.className = 'bub ' + item.type;
   b.innerHTML = item.html;
@@ -209,25 +197,13 @@ function addBubble(item){
 }
 
 function renderTo(n){
-  // clear and re-render up to n items
-  chat.querySelectorAll('.bub,.quick').forEach(x => x.remove());
-  for(let i=0;i<n;i++){
-    addBubble(SCRIPT[i]);
-  }
-  // if quick row exists and we're past it, mark main option chosen
-  const quick = chat.querySelector('.quick');
-  if(quick && n > SCRIPT.findIndex(s=>s.type==='quick')){
-    quick.querySelectorAll('button').forEach(b => { b.disabled = true; });
-    quick.querySelector('[data-main]').style.background = '#eef5fd';
-    quick.querySelector('[data-main]').style.borderColor = '#1557c0';
-  }
+  chat.querySelectorAll('.bub').forEach(x => x.remove());
+  for(let i=0;i<n;i++) addBubble(SCRIPT[i]);
   chat.scrollTop = chat.scrollHeight;
   idx = n;
   backBtn.disabled = idx === 0;
   nextBtn.disabled = idx >= SCRIPT.length;
-  if(idx >= SCRIPT.length) nextBtn.textContent = 'Flow complete';
-  else nextBtn.textContent = 'Next message →';
-  // highlight steps
+  nextBtn.textContent = idx >= SCRIPT.length ? 'Flow complete' : 'Next message →';
   const cur = idx === 0 ? 0 : SCRIPT[Math.min(idx, SCRIPT.length-1)].step;
   stepCards.forEach(s => s.classList.toggle('active', +s.dataset.step === cur && idx > 0));
 }
