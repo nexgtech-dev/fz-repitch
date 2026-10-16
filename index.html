@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3 fixes spotted on fonezone.com — NexG Tech</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0f2438;--ink-2:#3d5266;--muted:#6b7f92;--line:#e3eaf1;
+    --blue:#1557c0;--blue-dark:#0f4396;--green:#0f8a5f;--amber:#b8860b;
+    --bg-soft:#f6f9fc;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--ink);background:#fff;line-height:1.55;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block;border-radius:12px}
+  a{color:var(--blue);text-decoration:none}
+
+  .top{background:var(--ink);color:#fff;text-align:center;padding:10px 16px;font-size:13px}
+  .top b{font-weight:600}
+
+  .hero{max-width:1060px;margin:0 auto;padding:52px 20px 10px}
+  .hero .kicker{font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--blue)}
+  .hero h1{font-size:40px;font-weight:800;letter-spacing:-.025em;line-height:1.12;margin-top:10px;max-width:20ch}
+  .hero p{font-size:16px;color:var(--ink-2);margin-top:14px;max-width:62ch}
+  .meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+  .chip{font-size:12.5px;font-weight:600;color:var(--ink-2);border:1px solid var(--line);border-radius:999px;padding:6px 13px;background:var(--bg-soft)}
+
+  .wrap{max-width:1060px;margin:0 auto;padding:20px 20px 60px}
+
+  .fix{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:44px 0;border-top:1px solid var(--line);align-items:start}
+  .fix:nth-child(even) .proof{order:2}
+  .fix-num{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:10px;background:var(--ink);color:#fff;font-weight:800;font-size:15px;margin-bottom:12px}
+  .fix h2{font-size:24px;font-weight:800;letter-spacing:-.015em;line-height:1.2}
+  .fix .tagline{color:var(--ink-2);font-size:14.5px;margin-top:8px}
+  .block{margin-top:20px}
+  .block h4{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+  .block p{font-size:14.5px;color:var(--ink-2)}
+  .block .cite{font-size:13px;color:var(--muted);margin-top:8px;font-family:ui-monospace,Menlo,monospace;background:var(--bg-soft);border:1px solid var(--line);border-radius:8px;padding:10px 12px;line-height:1.6;overflow-x:auto}
+  .proof figcaption{font-size:12.5px;color:var(--muted);margin-top:9px}
+  .proof .frame{border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .badge-cost{display:inline-block;font-size:12px;font-weight:700;color:#9a3412;background:#fff7ed;border:1px solid #fed7aa;border-radius:999px;padding:4px 11px;margin-top:14px}
+
+  .after{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .after-inner{max-width:1060px;margin:0 auto;padding:56px 20px}
+  .after h2{font-size:28px;font-weight:800;letter-spacing:-.02em}
+  .after > p{color:var(--ink-2);font-size:15px;margin-top:10px;max-width:60ch}
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px;display:flex;flex-direction:column}
+  .card .ic{width:40px;height:40px;border-radius:11px;background:#eaf1fc;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+  .card h3{font-size:18px;font-weight:800}
+  .card p{font-size:14px;color:var(--ink-2);margin-top:8px;flex:1}
+  .card a{margin-top:18px;display:inline-flex;align-items:center;gap:7px;font-weight:700;font-size:14.5px}
+
+  .close{max-width:1060px;margin:0 auto;padding:52px 20px 20px}
+  .close h2{font-size:24px;font-weight:800;letter-spacing:-.015em}
+  .close p{color:var(--ink-2);font-size:15px;margin-top:10px;max-width:64ch}
+  .close ul{margin:16px 0 0 20px;color:var(--ink-2);font-size:14.5px}
+  .close li{margin:7px 0}
+
+  footer{border-top:1px solid var(--line);padding:30px 20px;text-align:center;font-size:12.5px;color:var(--muted)}
+  footer b{color:var(--ink-2)}
+
+  @media(max-width:860px){
+    .fix{grid-template-columns:1fr;gap:22px;padding:34px 0}
+    .fix:nth-child(even) .proof{order:0}
+    .cards{grid-template-columns:1fr}
+    .hero h1{font-size:29px}
+  }
+  @media print{
+    .top{display:none}
+    .fix{break-inside:avoid}
+    body{font-size:11pt}
+  }
+</style>
+</head>
+<body>
+
+<div class="top"><b>FoneZone · October 2026</b> · live crawl of fonezone.com — free findings, no strings</div>
+
+<div class="hero">
+  <div class="kicker">NexG Tech · site review</div>
+  <h1>3 quick fixes for fonezone.com</h1>
+  <p>We ran a full crawl of your storefront — desktop, mobile, product pages, search, checkout paths. The catalogue and ops behind it are solid. These three things, though, leak trust on pages you already pay traffic for. Each one below is captured from your live site on 16 Oct 2026, with the exact code that causes it.</p>
+  <div class="meta">
+    <span class="chip">Sources: fonezone.com + fonezone.me</span>
+    <span class="chip">Captured 16 Oct 2026</span>
+    <span class="chip">No meeting required — fix these first</span>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- FIX 1 -->
+  <section class="fix">
+    <figure class="proof">
+      <div class="frame">
+        <img src="proof/before_discount_REVEALED.png" alt="fonezone.com predictive search showing iPhone 7 priced at Rs. 10,560.39 with a red (--2547%) discount badge">
+      </div>
+      <figcaption>Live predictive search on fonezone.com, 16 Oct 2026. The red badge is rendered from corrupt <code>compare_at</code> values in the product data.</figcaption>
+    </figure>
+    <div>
+      <div class="fix-num">1</div>
+      <h2>Discount badges read “(–2547%)”</h2>
+      <p class="tagline">A shopper's first glance lands on broken math. Broken math reads as “what else on this site is broken?”</p>
+      <div class="block">
+        <h4>What we found</h4>
+        <p>Your product cards and search results compute discount % from compare-at prices that were never cleaned up during import — values like ₹1,424,900 on a ₹10,560 phone. The badge prints the negative result instead of hiding it.</p>
+        <div class="cite">
+          data-compare="1424900" ×4 &nbsp;·&nbsp; data-compare="39900" ×4 &nbsp;·&nbsp; data-compare="14900" ×4<br>
+          badge text: "(--2547%)" ×4 &nbsp;·&nbsp; "(--3793%)" ×4 &nbsp;·&nbsp; "(-0%)" ×12
+        </div>
+      </div>
+      <div class="block">
+        <h4>Why it costs sales</h4>
+        <p>Used-phone buyers are already risk-sensitive. A store that can't do percentage arithmetic invites the question they fear most: “is this unit what it says it is?”</p>
+      </div>
+      <div class="block">
+        <h4>The fix</h4>
+        <p>Strip corrupt compare-at values, or show a badge only when the math is real. On the concept PDP we rebuilt for your iPhone 7: one honest price, no fake MRP, no percentage at all — <a href="pdp-after.html">see it here</a>.</p>
+      </div>
+      <span class="badge-cost">Trust leak · affects every product card</span>
+    </div>
+  </section>
+
+  <!-- FIX 2 -->
+  <section class="fix">
+    <figure class="proof">
+      <div class="frame">
+        <img src="proof/audit_real_com_scroll.png" alt="fonezone.com listing showing '12 MONTHS WARRANTY' badges alongside decimal pricing and truncated 'Part Change' titles">
+      </div>
+      <figcaption>Category page, same crawl. “12 MONTHS WARRANTY” badges sit under a top bar that says “Upto 6 months warranty”.</figcaption>
+    </figure>
+    <div>
+      <div class="fix-num">2</div>
+      <h2>Warranty says three different numbers</h2>
+      <p class="tagline">6 months in the top bar. 12 months on the cards. “Life Time Warranty” four more times in the page source.</p>
+      <div class="block">
+        <h4>What we found</h4>
+        <p>One page of fonezone.com carries all three claims simultaneously — in the announcement bar, the product-card badges, and embedded section text. A buyer comparing two phones can't tell which promise applies to which unit.</p>
+        <div class="cite">
+          "Upto 6 months warranty" ×1 (top bar, every page)<br>
+          "12 Months Warranty" ×14 (product cards)<br>
+          "Life Time Warranty" ×4 (section copy)
+        </div>
+      </div>
+      <div class="block">
+        <h4>Why it costs sales</h4>
+        <p>Warranty is the #1 objection in used-phone retail. Contradiction turns an objection into a support ticket — or worse, a chargeback when the invoice says something the banner didn't.</p>
+      </div>
+      <div class="block">
+        <h4>The fix</h4>
+        <p>One number, everywhere: banner, card, PDP, invoice, WhatsApp receipt. If a unit genuinely carries a different term, say it on that unit — not as a second global claim. We used your own header's number (6 months) throughout the <a href="pdp-after.html">concept PDP</a>.</p>
+      </div>
+      <span class="badge-cost">Support + chargeback risk · every page</span>
+    </div>
+  </section>
+
+  <!-- FIX 3 -->
+  <section class="fix">
+    <figure class="proof">
+      <div class="frame">
+        <img src="proof/audit_real_com_pdp.png" alt="fonezone.com product detail for iPhone 7 showing price Rs. 10,560.39 with decimals">
+      </div>
+      <figcaption>Live PDP for iPhone 7 256GB. Price renders as ₹10,560.39 — paise on a phone sale, currency-conversion style.</figcaption>
+    </figure>
+    <div>
+      <div class="fix-num">3</div>
+      <h2>Decimal prices + “Part Change” jargon in titles</h2>
+      <p class="tagline">₹17,560.33 and “Apple iPhone 12 mini 128GB Green Good (Part Change…” — words your customer doesn't know, in the one line they always read.</p>
+      <div class="block">
+        <h4>What we found</h4>
+        <p>Prices render to two decimals site-wide (₹10,560.39, ₹25,400.37, ₹17,560.33). Product titles include internal grading notes — “(Part Change Message)” appears 30 times in site source — and truncate mid-phrase on cards.</p>
+        <div class="cite">
+          "Part Change Message" ×30 in site source<br>
+          "Rs. 10,560.39" · "Rs. 17,560.33" · "Rs. 25,400.37"
+        </div>
+      </div>
+      <div class="block">
+        <h4>Why it costs sales</h4>
+        <p>Paise on a phone reads like an FX glitch, not a price. “Part Change” is your internal grading language leaking into the storefront — shoppers skip what they can't parse, and truncated titles kill the comparison shopping that drives AOV.</p>
+      </div>
+      <div class="block">
+        <h4>The fix</h4>
+        <p>Round to ₹. Translate internal notes into the grade system buyers already understand (A / B / C with disclosed flaws) — which is exactly what the <a href="pdp-after.html">concept PDP</a> does, using your real product photos.</p>
+      </div>
+      <span class="badge-cost">Conversion drag · titles + prices site-wide</span>
+    </div>
+  </section>
+
+</div>
+
+<div class="after">
+  <div class="after-inner">
+    <h2>We didn't just write them up — we built the after</h2>
+    <p>Two working pages, built from your live catalogue data and product photos. Open them on a phone; they were designed mobile-first, like your traffic.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="ic">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="6" y="2" width="12" height="20" rx="2.5" stroke="#1557c0" stroke-width="2"/><circle cx="12" cy="18.5" r="1" fill="#1557c0"/></svg>
+        </div>
+        <h3>Reimagined product page</h3>
+        <p>Your iPhone 7 256GB, rebuilt: honest ₹10,560, Grade A/B/C with per-grade flaw lists, measured battery health, 32-point inspection summary, one warranty number. Real photos, pulled from your Shopify CDN.</p>
+        <a href="pdp-after.html">Open the concept PDP →</a>
+      </div>
+      <div class="card">
+        <div class="ic">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3z" stroke="#1557c0" stroke-width="2"/><path d="M8.5 10.5c.5 3 2.5 4.8 5.2 5.4l1.3-1.3 2 .9-.4 1.6c-3.9.4-7.7-2.9-8.4-7l1.6-.4.9 2-2.2-1.2z" fill="#1557c0"/></svg>
+        </div>
+        <h3>COD address check on WhatsApp</h3>
+        <p>One pre-approved message confirms the delivery address before a COD unit ships — quick-reply buttons, optional ₹1,000 UPI advance in the same thread. Runs on WhatsApp Business API; no new app for you or the buyer.</p>
+        <a href="cod-flow.html">Watch the 60-second flow →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="close">
+  <h2>What we'd do next, if you want us to</h2>
+  <p>In this order, smallest first:</p>
+  <ul>
+    <li><b>Same week:</b> bulk-clean corrupt compare-at values and hide badges where the math fails — pure data fix, no theme work.</li>
+    <li><b>Same week:</b> collapse warranty copy to one number across banner, cards and PDP.</li>
+    <li><b>Next sprint:</b> grade system (A/B/C) wired into Shopify metafields, titles cleaned of internal notes, prices rounded at the template level.</li>
+    <li><b>Then:</b> WhatsApp COD confirmation on the existing support number — template approval + a small Flow, roughly two weeks end to end.</li>
+  </ul>
+  <p style="margin-top:18px">No deck, no meeting needed to start on the data fixes. If you want the PDP-grade system built on your actual Shopify theme, that's a 30-minute call — but only when you're ready.</p>
+</div>
+
+<footer>
+  <b>NexG Tech</b> · prepared for Hemant Verma, FoneZone · 16 Oct 2026<br>
+  All findings captured from live fonezone.com / fonezone.me. Concept pages are proposals, not deployed changes.
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apple iPhone 7 256GB Jet Black — FoneZone Concept PDP</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0f2438;
+    --ink-2:#3d5266;
+    --muted:#6b7f92;
+    --line:#e3eaf1;
+    --bg:#ffffff;
+    --bg-soft:#f6f9fc;
+    --blue:#1557c0;
+    --blue-dark:#0f4396;
+    --green:#0f8a5f;
+    --green-soft:#e8f7f1;
+    --red:#c0392b;
+    --radius:14px;
+    --shadow:0 10px 30px rgba(15,36,56,.10);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--ink);background:var(--bg);line-height:1.5;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  button{font-family:inherit;cursor:pointer}
+  a{color:var(--blue);text-decoration:none}
+
+  .announce{background:var(--ink);color:#fff;font-size:13px;text-align:center;padding:9px 16px}
+  .announce b{font-weight:600}
+  .announce .dot{opacity:.45;margin:0 10px}
+
+  header.site{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:50}
+  .header-inner{max-width:1180px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;gap:28px}
+  .logo{font-weight:800;font-size:20px;letter-spacing:.06em;display:flex;align-items:center;gap:8px;color:var(--ink)}
+  .logo svg{flex:none}
+  nav.main{display:flex;gap:22px;font-size:14px;font-weight:500;color:var(--ink-2)}
+  nav.main a{color:inherit}
+  nav.main a:hover{color:var(--blue)}
+  .header-right{margin-left:auto;display:flex;align-items:center;gap:18px;font-size:13px;color:var(--ink-2);font-weight:500;white-space:nowrap}
+  .cart-chip{display:flex;align-items:center;gap:6px;border:1px solid var(--line);border-radius:999px;padding:6px 12px}
+
+  .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+  .crumbs{font-size:13px;color:var(--muted);padding:18px 0 10px}
+  .crumbs a{color:var(--muted)}
+  .crumbs a:hover{color:var(--blue)}
+  .crumbs span.sep{margin:0 7px;opacity:.5}
+
+  .pdp{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;padding:14px 0 56px}
+
+  /* gallery */
+  .gallery{position:sticky;top:78px;align-self:start}
+  .main-frame{border:1px solid var(--line);border-radius:var(--radius);background:var(--bg-soft);overflow:hidden;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center}
+  .main-frame img{width:100%;height:100%;object-fit:contain}
+  .thumbs{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+  .thumbs button{width:72px;height:72px;border-radius:10px;border:2px solid var(--line);background:var(--bg-soft);padding:4px;overflow:hidden}
+  .thumbs button img{width:100%;height:100%;object-fit:cover;border-radius:6px}
+  .thumbs button.active{border-color:var(--blue)}
+  .gallery-note{margin-top:12px;font-size:12.5px;color:var(--muted);display:flex;gap:8px;align-items:flex-start}
+  .gallery-note svg{flex:none;margin-top:1px}
+
+  /* buy box */
+  h1{font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1.15}
+  .subtitle{color:var(--ink-2);font-size:15px;margin-top:6px}
+  .cert-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+  .pill{font-size:12px;font-weight:600;padding:5px 11px;border-radius:999px;background:var(--green-soft);color:var(--green);display:inline-flex;align-items:center;gap:5px}
+  .pill.blue{background:#eaf1fc;color:var(--blue)}
+
+  .price-block{margin-top:22px;padding:18px 20px;border:1px solid var(--line);border-radius:var(--radius);background:var(--bg-soft)}
+  .price{font-size:34px;font-weight:800;letter-spacing:-.02em}
+  .price small{font-size:15px;font-weight:600;color:var(--ink-2);vertical-align:top;margin-right:2px}
+  .price-meta{font-size:13px;color:var(--muted);margin-top:4px}
+  .emi{margin-top:10px;font-size:13.5px;color:var(--ink-2);background:#fff;border:1px dashed var(--line);border-radius:10px;padding:9px 12px}
+  .emi b{color:var(--ink)}
+
+  .section-label{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:26px 0 10px}
+
+  .grades{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+  .grade{border:2px solid var(--line);border-radius:12px;padding:13px 12px;text-align:left;background:#fff;transition:border-color .15s, box-shadow .15s}
+  .grade:hover{border-color:#b9cde3}
+  .grade.active{border-color:var(--blue);box-shadow:0 0 0 3px rgba(21,87,192,.12)}
+  .grade .g-name{font-weight:700;font-size:14.5px}
+  .grade .g-price{font-weight:700;font-size:15px;color:var(--blue);margin-top:3px}
+  .grade .g-desc{font-size:12px;color:var(--muted);margin-top:6px;line-height:1.4}
+  .flaws{margin-top:14px;border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:13.5px}
+  .flaws h4{font-size:13px;font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:7px}
+  .flaws ul{list-style:none;display:grid;gap:7px}
+  .flaws li{display:flex;gap:9px;color:var(--ink-2)}
+  .flaws li svg{flex:none;margin-top:2px}
+  .flaws .ok{color:var(--green)}
+
+  .swatches{display:flex;gap:10px;align-items:center}
+  .swatch{width:38px;height:38px;border-radius:50%;border:2px solid var(--line);background:#1a1a1a;position:relative}
+  .swatch.active{border-color:var(--blue);box-shadow:0 0 0 3px rgba(21,87,192,.14)}
+  .swatch-label{font-size:13px;color:var(--ink-2);font-weight:500}
+  .storage{display:flex;gap:10px;flex-wrap:wrap}
+  .stor{border:2px solid var(--line);border-radius:10px;padding:10px 16px;font-size:14px;font-weight:600;background:#fff;min-width:96px;text-align:center}
+  .stor small{display:block;font-size:11px;font-weight:500;color:var(--muted);margin-top:2px}
+  .stor.active{border-color:var(--blue);color:var(--blue)}
+  .stor.oos{opacity:.65;cursor:not-allowed}
+
+  .qty-row{display:flex;gap:12px;align-items:center;margin-top:8px}
+  .qty{display:flex;align-items:center;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  .qty button{width:40px;height:44px;border:none;background:#fff;font-size:18px;color:var(--ink-2)}
+  .qty span{width:40px;text-align:center;font-weight:700;font-size:15px}
+  .cta-col{display:grid;gap:10px;margin-top:18px}
+  .btn{border:none;border-radius:12px;padding:15px 20px;font-size:15px;font-weight:700;display:flex;align-items:center;justify-content:center;gap:9px}
+  .btn-primary{background:var(--blue);color:#fff}
+  .btn-primary:hover{background:var(--blue-dark)}
+  .btn-wa{background:#fff;color:var(--ink);border:2px solid var(--line)}
+  .btn-wa:hover{border-color:var(--green);color:var(--green)}
+  .trust-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:16px;font-size:12.5px;color:var(--ink-2)}
+  .trust-row span{display:flex;align-items:center;gap:6px}
+
+  /* battery + inspection */
+  .panel-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:24px;padding:8px 0 48px}
+  .card{border:1px solid var(--line);border-radius:var(--radius);padding:24px;background:#fff}
+  .card h3{font-size:17px;font-weight:800;margin-bottom:4px}
+  .card .sub{font-size:13px;color:var(--muted);margin-bottom:18px}
+  .battery-wrap{display:flex;align-items:center;gap:22px}
+  .batt-gauge{position:relative;width:120px;height:120px;flex:none}
+  .batt-gauge svg{transform:rotate(-90deg)}
+  .batt-gauge .val{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+  .batt-gauge .val b{font-size:26px;font-weight:800}
+  .batt-gauge .val small{font-size:11px;color:var(--muted)}
+  .batt-facts{display:grid;gap:9px;font-size:13.5px;color:var(--ink-2)}
+  .batt-facts b{color:var(--ink)}
+  .check-list{display:grid;grid-template-columns:1fr 1fr;gap:9px 18px}
+  .check{display:flex;gap:9px;align-items:flex-start;font-size:13.5px;color:var(--ink-2)}
+  .check svg{flex:none;margin-top:2px}
+
+  .box-strip{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .box-inner{max-width:1180px;margin:0 auto;padding:34px 20px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:28px}
+  .box-item h4{font-size:14px;font-weight:700;margin-bottom:6px}
+  .box-item p{font-size:13px;color:var(--muted)}
+
+  .cod-cta{max-width:1180px;margin:0 auto;padding:44px 20px}
+  .cod-inner{border:1px solid var(--line);border-radius:18px;padding:30px 32px;display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;background:linear-gradient(135deg,#f6fbf8 0%,#f4f8fd 100%)}
+  .cod-inner h3{font-size:21px;font-weight:800;letter-spacing:-.01em}
+  .cod-inner p{font-size:14px;color:var(--ink-2);margin-top:8px;max-width:52ch}
+  .cod-steps{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+  .step-chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 13px;font-size:12.5px;font-weight:600;color:var(--ink-2);display:flex;gap:7px;align-items:center}
+  .step-chip b{color:var(--green)}
+  .cod-inner .btn{width:100%}
+
+  footer.site{border-top:1px solid var(--line);padding:28px 20px;text-align:center;font-size:12.5px;color:var(--muted)}
+  footer.site b{color:var(--ink-2)}
+
+  .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--ink);color:#fff;padding:13px 22px;border-radius:12px;font-size:14px;font-weight:600;opacity:0;transition:all .3s;z-index:100;pointer-events:none}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+  .mobile-bar{display:none}
+
+  @media(max-width:900px){
+    .pdp{grid-template-columns:1fr;gap:28px;padding-bottom:96px}
+    .gallery{position:static}
+    .panel-grid{grid-template-columns:1fr}
+    .box-inner{grid-template-columns:1fr;gap:20px}
+    .cod-inner{grid-template-columns:1fr;padding:24px}
+    nav.main{display:none}
+    h1{font-size:24px}
+    .price{font-size:28px}
+    .check-list{grid-template-columns:1fr}
+    .mobile-bar{display:flex;position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);padding:12px 16px;gap:12px;align-items:center;z-index:60;box-shadow:0 -8px 24px rgba(15,36,56,.08)}
+    .mobile-bar .m-price{font-weight:800;font-size:17px}
+    .mobile-bar .m-price small{display:block;font-size:11px;font-weight:500;color:var(--muted)}
+    .mobile-bar .btn{flex:1;padding:13px}
+    .toast{bottom:86px}
+  }
+</style>
+</head>
+<body>
+
+<div class="announce">
+  <b>6-month warranty</b> on every device <span class="dot">·</span> COD across India <span class="dot">·</span> 7-day replacement, no questions
+</div>
+
+<header class="site">
+  <div class="header-inner">
+    <div class="logo">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="6" y="2" width="12" height="20" rx="2.5" stroke="#1557c0" stroke-width="2"/><circle cx="12" cy="18.5" r="1" fill="#1557c0"/></svg>
+      FONEZONE
+    </div>
+    <nav class="main">
+      <a href="#">iPhones</a>
+      <a href="#">Android</a>
+      <a href="#">MacBooks</a>
+      <a href="#">Warranty &amp; Returns</a>
+    </nav>
+    <div class="header-right">
+      <span>Track order</span>
+      <span class="cart-chip">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 3h2l2.4 12.2a1 1 0 0 0 1 .8h9.8a1 1 0 0 0 1-.8L21 7H7" stroke="#3d5266" stroke-width="2" stroke-linecap="round"/><circle cx="10" cy="20" r="1.5" fill="#3d5266"/><circle cx="18" cy="20" r="1.5" fill="#3d5266"/></svg>
+        Cart (0)
+      </span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="crumbs">
+    <a href="#">Home</a><span class="sep">/</span>
+    <a href="#">Apple iPhones</a><span class="sep">/</span>
+    <a href="#">iPhone 7</a><span class="sep">/</span>
+    256GB Jet Black
+  </div>
+
+  <div class="pdp">
+    <!-- GALLERY -->
+    <div class="gallery">
+      <div class="main-frame">
+        <img id="mainImg" src="https://cdn.shopify.com/s/files/1/0618/8761/0924/files/1_49992665-39f1-4604-87ff-a8d4ba96e870.jpg?v=1788631349" alt="Apple iPhone 7 256GB Jet Black — front">
+      </div>
+      <div class="thumbs" id="thumbs"></div>
+      <div class="gallery-note">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#6b7f92" stroke-width="2"/><path d="M12 8v5" stroke="#6b7f92" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="16" r="1" fill="#6b7f92"/></svg>
+        Photos are of the actual unit you will receive — not stock images. Every scratch you see is a scratch you will get.
+      </div>
+    </div>
+
+    <!-- BUY BOX -->
+    <div class="buybox">
+      <h1>Apple iPhone 7</h1>
+      <p class="subtitle">256GB · Jet Black · Unlocked · Ready to ship</p>
+      <div class="cert-row">
+        <span class="pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0f8a5f" stroke-width="3" stroke-linecap="round"/></svg>
+          6-month warranty
+        </span>
+        <span class="pill">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0f8a5f" stroke-width="3" stroke-linecap="round"/></svg>
+          7-day replacement
+        </span>
+        <span class="pill blue">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#1557c0" stroke-width="3" stroke-linecap="round"/></svg>
+          32-point inspection passed
+        </span>
+      </div>
+
+      <div class="price-block">
+        <div class="price"><small>₹</small><span id="priceVal">10,560</span></div>
+        <div class="price-meta" id="priceMeta">Grade A price · warranty included · no hidden fees at checkout</div>
+        <div class="emi">EMI from <b>₹880/month</b> · 12 months · interest shown before you apply, not after</div>
+      </div>
+
+      <div class="section-label">Condition grade</div>
+      <div class="grades" id="grades">
+        <button class="grade active" data-grade="a" data-price="10560" data-batt="87" data-cycles="~420">
+          <div class="g-name">Grade A</div>
+          <div class="g-price">₹10,560</div>
+          <div class="g-desc">Near mint. 0–3 micro-scratches, invisible at arm's length.</div>
+        </button>
+        <button class="grade" data-grade="b" data-price="8990" data-batt="82" data-cycles="~510">
+          <div class="g-name">Grade B</div>
+          <div class="g-price">₹8,990</div>
+          <div class="g-desc">Light wear. Scuffs on frame, screen glass clean.</div>
+        </button>
+        <button class="grade" data-grade="c" data-price="7490" data-batt="78" data-cycles="~600">
+          <div class="g-name">Grade C</div>
+          <div class="g-price">₹7,490</div>
+          <div class="g-desc">Honest marks. Visible scratches incl. on screen. Fully functional.</div>
+        </button>
+      </div>
+
+      <div class="flaws" id="flawBox">
+        <h4>
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#0f2438" stroke-width="2"/><path d="M12 8v5" stroke="#0f2438" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="16" r="1" fill="#0f2438"/></svg>
+          What to expect on <span id="flawGrade">Grade A</span>
+        </h4>
+        <ul id="flawList"></ul>
+      </div>
+
+      <div class="section-label">Storage</div>
+      <div class="storage">
+        <button class="stor oos" disabled>32GB<small>Notify me</small></button>
+        <button class="stor oos" disabled>128GB<small>Notify me</small></button>
+        <button class="stor active">256GB<small>In stock</small></button>
+      </div>
+
+      <div class="section-label">Colour</div>
+      <div class="swatches">
+        <div class="swatch active" title="Jet Black"></div>
+        <span class="swatch-label">Jet Black — the only unit we have in this grade right now</span>
+      </div>
+
+      <div class="section-label">Quantity</div>
+      <div class="qty-row">
+        <div class="qty">
+          <button id="qMinus" aria-label="Decrease">−</button>
+          <span id="qVal">1</span>
+          <button id="qPlus" aria-label="Increase">+</button>
+        </div>
+        <span style="font-size:13px;color:var(--muted)">Ships within 24 hrs of order confirmation</span>
+      </div>
+
+      <div class="cta-col">
+        <button class="btn btn-primary" id="addBtn">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M3 3h2l2.4 12.2a1 1 0 0 0 1 .8h9.8a1 1 0 0 0 1-.8L21 7H7" stroke="#fff" stroke-width="2" stroke-linecap="round"/><circle cx="10" cy="20" r="1.5" fill="#fff"/><circle cx="18" cy="20" r="1.5" fill="#fff"/></svg>
+          Add to cart — <span id="ctaPrice">₹10,560</span>
+        </button>
+        <a class="btn btn-wa" href="cod-flow.html">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.7-1.2A9 9 0 1 0 12 3z" stroke="#0f8a5f" stroke-width="2"/><path d="M8.5 10.5c.5 3 2.5 4.8 5.2 5.4l1.3-1.3 2 .9-.4 1.6c-3.9.4-7.7-2.9-8.4-7l1.6-.4.9 2-2.2-1.2z" fill="#0f8a5f"/></svg>
+          Order with COD — verify address on WhatsApp first
+        </a>
+      </div>
+
+      <div class="trust-row">
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6l8-3z" stroke="#0f8a5f" stroke-width="2"/></svg> Warranty starts day 1, not on delivery</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="13" rx="2" stroke="#1557c0" stroke-width="2"/><path d="M3 10h18" stroke="#1557c0" stroke-width="2"/></svg> UPI · Cards · COD (₹1,000 advance)</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="panel-grid">
+    <div class="card">
+      <h3>Battery health</h3>
+      <p class="sub">Measured on this unit, not a range we made up.</p>
+      <div class="battery-wrap">
+        <div class="batt-gauge">
+          <svg width="120" height="120" viewBox="0 0 120 120">
+            <circle cx="60" cy="60" r="50" stroke="#e3eaf1" stroke-width="10" fill="none"/>
+            <circle id="battArc" cx="60" cy="60" r="50" stroke="#0f8a5f" stroke-width="10" fill="none"
+              stroke-linecap="round" stroke-dasharray="314" stroke-dashoffset="41"/>
+          </svg>
+          <div class="val"><b id="battVal">87%</b><small>health</small></div>
+        </div>
+        <div class="batt-facts">
+          <div>Charge cycles: <b id="cycVal">~420</b></div>
+          <div>Typical runtime: <b>6–7 hrs screen-on</b></div>
+          <div>Replacement cost if it drops below 80% within warranty: <b>free</b></div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>32-point inspection — passed</h3>
+      <p class="sub">The 32 checks we run on every unit before it ships. Key items:</p>
+      <div class="check-list">
+        <div class="check"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0f8a5f" stroke-width="3" stroke-linecap="round"/></svg> Display: no dead pixels, touch full response</div>
+        <div class="check"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0f8a5f" stroke-width="3" stroke-linecap="round"/></svg> Touch ID paired to logic board</div>
+        <div class="check"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0f8a5f" stroke-width="3" stroke-linecap="round"/></svg> Both cameras focus &amp; flash fire</div>
+        <div class="check"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0f8a5f" stroke-width="3" stroke-linecap="round"/></svg> Loudspeaker, earpiece, both mics</div>
+        <div class="check"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0f8a5f" stroke-width="3" stroke-linecap="round"/></svg> Charging port seats firmly, fast charge ok</div>
+        <div class="check"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0f8a5f" stroke-width="3" stroke-linecap="round"/></svg> IMEI clean — not blocked, not stolen</div>
+        <div class="check"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0f8a5f" stroke-width="3" stroke-linecap="round"/></svg> Wi-Fi + Bluetooth pair &amp; hold</div>
+        <div class="check"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0f8a5f" stroke-width="3" stroke-linecap="round"/></svg> Water-seal status disclosed (IP67 not re-verified after refurb)</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="box-strip">
+  <div class="box-inner">
+    <div class="box-item">
+      <h4>In the box</h4>
+      <p>iPhone 7 handset · USB-Lightning cable · SIM ejector. No fake accessories, no "free case" we sourced for ₹40.</p>
+    </div>
+    <div class="box-item">
+      <h4>Warranty — one number, everywhere</h4>
+      <p>6 months, parts &amp; labour, same on the banner, the product page, the invoice and the WhatsApp receipt. If it says 12 somewhere, that's a bug — tell us and we honour it.</p>
+    </div>
+    <div class="box-item">
+      <h4>7-day replacement</h4>
+      <p>Dead on arrival or mismatch with the grade we sold you? Full replacement, we pay the pickup. No "restocking fee", no 15-day form.</p>
+    </div>
+  </div>
+</div>
+
+<div class="cod-cta">
+  <div class="cod-inner">
+    <div>
+      <h3>COD that doesn't get refused at the door</h3>
+      <p>RTO kills COD margins — we know. So before a COD order ships, we send one WhatsApp message to confirm the delivery address. 30 seconds for the customer, fewer refused parcels for us. ₹1,000 advance via UPI, balance on delivery.</p>
+      <div class="cod-steps">
+        <span class="step-chip"><b>1</b> Order placed</span>
+        <span class="step-chip"><b>2</b> WhatsApp address check</span>
+        <span class="step-chip"><b>3</b> Ships in 24 hrs</span>
+      </div>
+    </div>
+    <div>
+      <a class="btn btn-primary" href="cod-flow.html">See the 60-second flow →</a>
+    </div>
+  </div>
+</div>
+
+<footer class="site">
+  <b>Concept by NexG Tech</b> — redesign proposal for fonezone.com. Sample data for demonstration. Not a live product.<br>
+  Built from a live audit of fonezone.com on 16 Oct 2026.
+</footer>
+
+<div class="toast" id="toast">Added to cart</div>
+
+<div class="mobile-bar">
+  <div class="m-price">₹<span id="mPrice">10,560</span><small id="mGrade">Grade A</small></div>
+  <button class="btn btn-primary" id="mAdd">Add to cart</button>
+</div>
+
+<script>
+const IMAGES = [
+  "https://cdn.shopify.com/s/files/1/0618/8761/0924/files/1_49992665-39f1-4604-87ff-a8d4ba96e870.jpg?v=1788631349",
+  "https://cdn.shopify.com/s/files/1/0618/8761/0924/files/Untitled_27_65_205ef355-a31a-4b83-9897-cff7c3fa75af.jpg?v=1788631348",
+  "https://cdn.shopify.com/s/files/1/0618/8761/0924/files/Untitled_27_63_2ea7b71e-9ef1-47c3-a750-04fffd5cbeda.jpg?v=1788631349",
+  "https://cdn.shopify.com/s/files/1/0618/8761/0924/files/Untitled_27_64_d651c033-fd44-4154-860c-8acc4305848e.jpg?v=1788631349",
+  "https://cdn.shopify.com/s/files/1/0618/8761/0924/files/Untitled_27_68_3cb6b6d1-7a18-4b53-9c56-08eb9f1fce7c.jpg?v=1788631349",
+  "https://cdn.shopify.com/s/files/1/0618/8761/0924/files/2_999e2947-9e53-4dc6-bcd0-4055fe69934c.jpg?v=1788631349",
+  "https://cdn.shopify.com/s/files/1/0618/8761/0924/files/Untitled_27_66_a6a9af2a-4bf1-4aa3-9a23-72b500242d86.jpg?v=1788631349",
+  "https://cdn.shopify.com/s/files/1/0618/8761/0924/files/Untitled_27_67_3e37ede0-9f89-49fd-ad64-8ff9ba63efdc.jpg?v=1788631348"
+];
+
+const FLAWS = {
+  a: [
+    {ok:true, text:"Screen glass: flawless, no scratches"},
+    {ok:false, text:"Up to 3 micro-scratches on the back logo area (see photo 2)"},
+    {ok:true, text:"Frame corners: no dents, no chips"},
+    {ok:true, text:"Original Apple display, not a third-party swap"}
+  ],
+  b: [
+    {ok:true, text:"Screen glass: clean, no scratches you can feel"},
+    {ok:false, text:"Visible scuffs along the charging-port edge (photo 5)"},
+    {ok:false, text:"Light rubbing on the Apple logo"},
+    {ok:true, text:"Frame corners: no dents"}
+  ],
+  c: [
+    {ok:false, text:"2–3 visible scratches on the screen glass (photo 3)"},
+    {ok:false, text:"Scuffs across the full back panel"},
+    {ok:true, text:"Touch response 100% across the display"},
+    {ok:false, text:"Small paint chip, bottom-left corner"}
+  ]
+};
+
+const mainImg = document.getElementById('mainImg');
+const thumbs = document.getElementById('thumbs');
+IMAGES.forEach((src, i) => {
+  const b = document.createElement('button');
+  if (i === 0) b.classList.add('active');
+  b.innerHTML = `<img src="${src}" alt="Product photo ${i+1}">`;
+  b.addEventListener('click', () => {
+    mainImg.src = src;
+    thumbs.querySelectorAll('button').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+  });
+  thumbs.appendChild(b);
+});
+
+function fmt(n){ return n.toLocaleString('en-IN'); }
+
+function renderFlaws(grade){
+  const list = document.getElementById('flawList');
+  list.innerHTML = '';
+  FLAWS[grade].forEach(f => {
+    const li = document.createElement('li');
+    li.innerHTML = f.ok
+      ? `<svg class="ok" width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="#0f8a5f" stroke-width="3" stroke-linecap="round"/></svg><span>${f.text}</span>`
+      : `<svg width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#6b7f92" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="#6b7f92"/></svg><span>${f.text}</span>`;
+    list.appendChild(li);
+  });
+  document.getElementById('flawGrade').textContent = 'Grade ' + grade.toUpperCase();
+}
+
+document.querySelectorAll('.grade').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.grade').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const price = +btn.dataset.price;
+    const batt = +btn.dataset.batt;
+    document.getElementById('priceVal').textContent = fmt(price);
+    document.getElementById('ctaPrice').textContent = '₹' + fmt(price);
+    document.getElementById('mPrice').textContent = fmt(price);
+    document.getElementById('mGrade').textContent = 'Grade ' + btn.dataset.grade.toUpperCase();
+    document.getElementById('priceMeta').textContent =
+      'Grade ' + btn.dataset.grade.toUpperCase() + ' price · warranty included · no hidden fees at checkout';
+    document.getElementById('battVal').textContent = batt + '%';
+    document.getElementById('cycVal').textContent = btn.dataset.cycles;
+    const arc = document.getElementById('battArc');
+    arc.setAttribute('stroke-dashoffset', 314 - 314 * batt / 100);
+    arc.setAttribute('stroke', batt >= 85 ? '#0f8a5f' : batt >= 80 ? '#1557c0' : '#b8860b');
+    renderFlaws(btn.dataset.grade);
+  });
+});
+renderFlaws('a');
+
+let qty = 1;
+const qVal = document.getElementById('qVal');
+document.getElementById('qMinus').addEventListener('click', () => { if(qty>1){qty--; qVal.textContent=qty;} });
+document.getElementById('qPlus').addEventListener('click', () => { if(qty<3){qty++; qVal.textContent=qty;} else showToast('Max 3 per customer — this is a single used unit, not a warehouse'); });
+
+const toast = document.getElementById('toast');
+let toastT;
+function showToast(msg){
+  toast.textContent = msg;
+  toast.classList.add('show');
+  clearTimeout(toastT);
+  toastT = setTimeout(() => toast.classList.remove('show'), 2600);
+}
+document.getElementById('addBtn').addEventListener('click', () => showToast(`Added: iPhone 7 256GB · Grade ${document.querySelector('.grade.active').dataset.grade.toUpperCase()} × ${qty}`));
+document.getElementById('mAdd').addEventListener('click', () => showToast(`Added: iPhone 7 256GB · Grade ${document.querySelector('.grade.active').dataset.grade.toUpperCase()} × ${qty}`));
+</script>
+</body>
+</html>

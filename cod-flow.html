@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>COD Address Verification — WhatsApp Flow Concept · FoneZone</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0f2438;--ink-2:#3d5266;--muted:#6b7f92;--line:#e3eaf1;
+    --blue:#1557c0;--blue-dark:#0f4396;--green:#0f8a5f;
+    --wa-bubble-out:#dcf8c6;--wa-bg:#ece5dd;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--ink);background:#f4f7fb;line-height:1.5;-webkit-font-smoothing:antialiased}
+  a{color:var(--blue);text-decoration:none}
+
+  .top{background:var(--ink);color:#fff;text-align:center;padding:10px 16px;font-size:13px}
+  .top b{font-weight:600}
+  .top a{color:#9fc3ff}
+
+  .head{max-width:1100px;margin:0 auto;padding:40px 20px 8px;text-align:center}
+  .head h1{font-size:32px;font-weight:800;letter-spacing:-.02em}
+  .head p{color:var(--ink-2);font-size:15px;margin-top:10px;max-width:62ch;margin-left:auto;margin-right:auto}
+
+  .stage{max-width:1100px;margin:0 auto;padding:34px 20px 60px;display:grid;grid-template-columns:390px 1fr;gap:48px;align-items:start}
+
+  /* phone */
+  .phone{background:#111;border-radius:36px;padding:12px;box-shadow:0 24px 60px rgba(15,36,56,.25);width:390px;max-width:100%;margin:0 auto;position:sticky;top:24px}
+  .phone-screen{background:var(--wa-bg);border-radius:26px;overflow:hidden;height:680px;display:flex;flex-direction:column}
+  .wa-top{background:#075e54;color:#fff;padding:12px 14px;display:flex;align-items:center;gap:11px}
+  .wa-avatar{width:38px;height:38px;border-radius:50%;background:#128c7e;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;flex:none}
+  .wa-name{font-size:14.5px;font-weight:700;line-height:1.2}
+  .wa-status{font-size:11.5px;opacity:.85}
+  .wa-chat{flex:1;overflow-y:auto;padding:16px 12px;display:flex;flex-direction:column;gap:8px;
+    background-image:radial-gradient(rgba(0,0,0,.03) 1px, transparent 1px);background-size:18px 18px}
+  .day{align-self:center;background:#fff;color:var(--muted);font-size:11px;font-weight:600;padding:4px 12px;border-radius:8px;margin:4px 0}
+  .bub{max-width:82%;padding:8px 10px 6px;border-radius:10px;font-size:13.5px;position:relative;box-shadow:0 1px 1px rgba(0,0,0,.08);opacity:0;transform:translateY(10px);transition:all .35s}
+  .bub.show{opacity:1;transform:none}
+  .bub .t{display:block;font-size:10px;color:var(--muted);text-align:right;margin-top:4px}
+  .bub.in{align-self:flex-start;background:#fff;border-top-left-radius:2px}
+  .bub.out{align-self:flex-end;background:var(--wa-bubble-out);border-top-right-radius:2px}
+  .bub .tick{color:#34b7f1;font-weight:700;margin-left:3px}
+  .bub b{font-weight:700}
+  .bub .row{margin:3px 0}
+  .bub .upi{background:#fff;border:1px dashed #c9d6c0;border-radius:8px;padding:8px 10px;margin-top:6px;font-size:12.5px}
+  .quick{display:flex;gap:8px;align-self:flex-end;max-width:82%;opacity:0;transform:translateY(10px);transition:all .35s}
+  .quick.show{opacity:1;transform:none}
+  .quick button{flex:1;background:#fff;border:1px solid #cfe3f5;color:var(--blue);font-weight:700;font-size:12.5px;padding:9px 8px;border-radius:8px;cursor:pointer;font-family:inherit}
+  .quick button:hover{background:#eef5fd}
+  .quick button:disabled{opacity:.45;cursor:default}
+  .wa-input{background:#f0f0f0;padding:9px 12px;display:flex;gap:8px;align-items:center}
+  .wa-input .fake{flex:1;background:#fff;border-radius:20px;padding:8px 14px;color:#9aa5ae;font-size:12.5px}
+
+  .ctrl{display:flex;gap:10px;justify-content:center;margin-top:18px}
+  .ctrl button{border:1px solid var(--line);background:#fff;border-radius:10px;padding:10px 18px;font-size:13.5px;font-weight:700;color:var(--ink);cursor:pointer;font-family:inherit}
+  .ctrl button.primary{background:var(--blue);border-color:var(--blue);color:#fff}
+  .ctrl button:disabled{opacity:.4;cursor:default}
+
+  /* right panel */
+  .panel h2{font-size:22px;font-weight:800;letter-spacing:-.01em}
+  .panel .lede{color:var(--ink-2);font-size:14.5px;margin-top:8px}
+  .steps{margin-top:26px;display:grid;gap:14px}
+  .step{display:flex;gap:14px;padding:16px 18px;border:1px solid var(--line);border-radius:14px;background:#fff;transition:border-color .2s, box-shadow .2s}
+  .step.active{border-color:var(--blue);box-shadow:0 0 0 3px rgba(21,87,192,.12)}
+  .step .n{width:30px;height:30px;border-radius:50%;background:var(--ink);color:#fff;font-weight:800;font-size:13.5px;display:flex;align-items:center;justify-content:center;flex:none}
+  .step.active .n{background:var(--blue)}
+  .step h3{font-size:15px;font-weight:700}
+  .step p{font-size:13.5px;color:var(--ink-2);margin-top:4px}
+  .stats{margin-top:26px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+  .stat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px}
+  .stat b{display:block;font-size:22px;font-weight:800;color:var(--blue)}
+  .stat span{font-size:12px;color:var(--muted);display:block;margin-top:2px;line-height:1.35}
+  .note{margin-top:22px;font-size:12.5px;color:var(--muted);border-left:3px solid var(--line);padding-left:12px}
+
+  footer{border-top:1px solid var(--line);background:#fff;padding:26px 20px;text-align:center;font-size:12.5px;color:var(--muted)}
+  footer b{color:var(--ink-2)}
+
+  @media(max-width:900px){
+    .stage{grid-template-columns:1fr;gap:32px}
+    .phone{position:static}
+    .head h1{font-size:25px}
+    .stats{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="top"><b>Concept flow</b> · part of the FoneZone repitch pack · <a href="index.html">← back to the 3 fixes</a></div>
+
+<div class="head">
+  <h1>COD that doesn't die at the door</h1>
+  <p>One WhatsApp message confirms the address before a COD order ships. 30 seconds for the customer. Fewer refused parcels, lower RTO for FoneZone. Runs on WhatsApp Business API — no new app for anyone.</p>
+</div>
+
+<div class="stage">
+  <div>
+    <div class="phone">
+      <div class="phone-screen">
+        <div class="wa-top">
+          <div class="wa-avatar">FZ</div>
+          <div>
+            <div class="wa-name">FoneZone</div>
+            <div class="wa-status">business account · typically replies in minutes</div>
+          </div>
+        </div>
+        <div class="wa-chat" id="chat">
+          <div class="day">Today</div>
+        </div>
+        <div class="wa-input"><div class="fake">Message</div></div>
+      </div>
+    </div>
+    <div class="ctrl">
+      <button id="backBtn" disabled>← Back</button>
+      <button id="nextBtn" class="primary">Next message →</button>
+      <button id="replayBtn">↺ Replay</button>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>What just happened, and why it pays for itself</h2>
+    <p class="lede">Most COD RTO isn't fraud — it's typos, guest-checkout fake numbers, and "I didn't order this" at the door. A 30-second confirmation catches the cheap mistakes before a parcel crosses three states.</p>
+
+    <div class="steps" id="steps">
+      <div class="step" data-step="0">
+        <div class="n">1</div>
+        <div>
+          <h3>Order lands, message fires instantly</h3>
+          <p>The moment a COD order is placed, WhatsApp sends the summary. Customer sees the exact model, grade and price they committed to — no surprises at the door.</p>
+        </div>
+      </div>
+      <div class="step" data-step="1">
+        <div class="n">2</div>
+        <div>
+          <h3>Address shown back, one tap to confirm</h3>
+          <p>Quick-reply buttons, not a form. "This is correct" or "Edit address". Typing a full address on WhatsApp is why most verification flows fail — taps don't.</p>
+        </div>
+      </div>
+      <div class="step" data-step="2">
+        <div class="n">3</div>
+        <div>
+          <h3>Confirmed → order ships next day</h3>
+          <p>Unconfirmed after 24 hrs? Order pauses with a human follow-up call, not an automatic cancel. The customer stays in control; the parcel doesn't move blind.</p>
+        </div>
+      </div>
+      <div class="step" data-step="3">
+        <div class="n">4</div>
+        <div>
+          <h3>Optional: ₹1,000 UPI advance, same thread</h3>
+          <p>For higher-value COD, the partial advance link lives in the same chat. One thread from order to delivery tracking — no email, no separate dashboard.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b>~30s</b><span>Customer time to confirm — under one WhatsApp round-trip</span></div>
+      <div class="stat"><b>1 msg</b><span>Template, pre-approved on WhatsApp Business API</span></div>
+      <div class="stat"><b>₹0</b><span>New app or login for the customer</span></div>
+    </div>
+
+    <p class="note">Every message is a WhatsApp template (HSM) — approved once, reused forever. FoneZone's existing support number can be the sender; customers already trust that thread for order updates.</p>
+  </div>
+</div>
+
+<footer><b>Concept by NexG Tech</b> — for fonezone.com. Chat content is illustrative. Not a live FoneZone account.</footer>
+
+<script>
+const chat = document.getElementById('chat');
+const nextBtn = document.getElementById('nextBtn');
+const backBtn = document.getElementById('backBtn');
+const replayBtn = document.getElementById('replayBtn');
+const stepCards = document.querySelectorAll('.step');
+
+// step index = how many bubbles/quick-rows are shown (0..8 total beats)
+const SCRIPT = [
+  {type:'in', html:`Hi Priya 👋<div class="row">Your FoneZone order is confirmed:</div><div class="row"><b>Apple iPhone 7 · 256GB · Jet Black</b><br>Grade A · ₹10,560 · COD (₹1,000 advance)</div><div class="row">Order <b>#FZ-2841</b>`, step:0},
+  {type:'in', html:`To ship it, can you confirm this delivery address?<div class="row"><b>Priya Sharma</b><br>402, Shanti Residency, Linking Road<br>Bandra West, Mumbai 400050<br>Mob. +91 98••••••42</div>`, step:1},
+  {type:'quick', options:['This is correct','Edit address'], step:1},
+  {type:'out', html:`This is correct<span class="tick">✓✓</span><span class="t">10:42</span>`, step:1},
+  {type:'in', html:`Address confirmed ✅<div class="row">Your order ships <b>tomorrow by 2 PM</b> via BlueDart. Tracking link follows here.</div><div class="row">Warranty starts from the day it's delivered — 6 months, on this thread if anything goes wrong.</div>`, step:2},
+  {type:'in', html:`For COD, an advance of <b>₹1,000</b> locks the unit. Pay by UPI — balance ₹9,560 in cash at the door:<div class="upi">💳 fonezone@ybl · ₹1,000<br><span style="color:var(--muted)">Tap to pay in any UPI app</span></div>`, step:3}
+];
+
+let idx = 0;
+let elCount = 0;
+
+function addBubble(item){
+  if(item.type === 'quick'){
+    const q = document.createElement('div');
+    q.className = 'quick';
+    item.options.forEach((opt, i) => {
+      const b = document.createElement('button');
+      b.textContent = opt;
+      b.disabled = true;
+      if(i===0) b.dataset.main = '1';
+      q.appendChild(b);
+    });
+    chat.appendChild(q);
+    requestAnimationFrame(() => q.classList.add('show'));
+    return q;
+  }
+  const b = document.createElement('div');
+  b.className = 'bub ' + item.type;
+  b.innerHTML = item.html;
+  chat.appendChild(b);
+  requestAnimationFrame(() => b.classList.add('show'));
+  return b;
+}
+
+function renderTo(n){
+  // clear and re-render up to n items
+  chat.querySelectorAll('.bub,.quick').forEach(x => x.remove());
+  for(let i=0;i<n;i++){
+    addBubble(SCRIPT[i]);
+  }
+  // if quick row exists and we're past it, mark main option chosen
+  const quick = chat.querySelector('.quick');
+  if(quick && n > SCRIPT.findIndex(s=>s.type==='quick')){
+    quick.querySelectorAll('button').forEach(b => { b.disabled = true; });
+    quick.querySelector('[data-main]').style.background = '#eef5fd';
+    quick.querySelector('[data-main]').style.borderColor = '#1557c0';
+  }
+  chat.scrollTop = chat.scrollHeight;
+  idx = n;
+  backBtn.disabled = idx === 0;
+  nextBtn.disabled = idx >= SCRIPT.length;
+  if(idx >= SCRIPT.length) nextBtn.textContent = 'Flow complete';
+  else nextBtn.textContent = 'Next message →';
+  // highlight steps
+  const cur = idx === 0 ? 0 : SCRIPT[Math.min(idx, SCRIPT.length-1)].step;
+  stepCards.forEach(s => s.classList.toggle('active', +s.dataset.step === cur && idx > 0));
+}
+
+nextBtn.addEventListener('click', () => { if(idx < SCRIPT.length) renderTo(idx+1); });
+backBtn.addEventListener('click', () => { if(idx > 0) renderTo(idx-1); });
+replayBtn.addEventListener('click', () => renderTo(0));
+
+renderTo(0);
+</script>
+</body>
+</html>
